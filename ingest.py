@@ -1,10 +1,10 @@
-from pdfreader import read_pdf
-from chunker import chunk_pages
-from embedder import embed_chunks
-from vectorstore import store_in_pinecone
+from src.pdfreader import read_pdf
+from src.chunker import chunk_pages
+from src.embedder import embed_chunks
+from src.vectorstore import store_in_pinecone
 from typing import List
 
-pdf_path = "./resources/The Problem of the Puer Aeternus.pdf"
+pdf_path = "./data/The Problem of the Puer Aeternus.pdf"
 
 def run():
     # Step 1: Read PDF

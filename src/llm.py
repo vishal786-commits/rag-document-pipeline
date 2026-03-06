@@ -25,7 +25,7 @@ def query_llm_with_context(query: str, context: str) -> str:
                 {"role": "system", "content": "You are a knowledgeable assistant helping answer questions about the book The Problem of the Puer Aeternus and related Jungian psychology concepts. You will be provided with passages retrieved from the book as context. Use only the information in the provided context to answer the user’s question clearly and concisely. Do not invent information or rely on outside knowledge. If the answer cannot be found in the context, respond by saying that the information is not available in the provided material. Focus on explaining ideas accurately and in simple language while staying faithful to the meaning of the original text."},
                 {"role": "user", "content": f"Context: {context}\n\nQuery: {query}"}
             ],
-            temperature=0.4
+            temperature=0.5
         )
         return response.choices[0].message.content.strip()
     except Exception as e:

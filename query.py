@@ -1,6 +1,6 @@
-from embedder import embed_user_query
-from vectorstore import search_in_pinecone
-from llm import query_llm_with_context
+from src.embedder import embed_user_query
+from src.vectorstore import search_in_pinecone
+from src.llm import query_llm_with_context
 """
 Process user queries by embedding them, searching for relevant context, and generating responses.
 """
