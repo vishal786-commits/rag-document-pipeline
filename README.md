@@ -20,7 +20,7 @@ Indexing and querying *The Problem of the Puer Aeternus*.
 ---
 
 ## **System Architecture**
-![System Architecture](assets\System Architecture.png)
+![System Architecture](assets/system-architecture.png)
 
 Pipeline flow:
 
@@ -39,15 +39,15 @@ Pipeline flow:
 rag-document-pipeline
 │
 ├── data
-│ └── The Problem of the Puer Aeternus.pdf
+│   └── The Problem of the Puer Aeternus.pdf
 │
 ├── src
-│ ├── chunker.py
-│ ├── embedder.py
-│ ├── pdfreader.py
-│ ├── vectorstore.py
-│ ├── query.py
-│ └── llm.py
+│   ├── chunker.py
+│   ├── embedder.py
+│   ├── pdfreader.py
+│   ├── vectorstore.py
+│   ├── query.py
+│   └── llm.py
 │
 ├── ingest.py
 ├── requirements.txt
@@ -68,3 +68,32 @@ rag-document-pipeline
 | `ingest.py` | Runs the document ingestion pipeline |
 
 ---
+## **Future Improvements**
+
+- Add FastAPI service layer for API access
+- Implement hybrid retrieval (BM25 + embeddings)
+- Add cross-encoder reranking
+- Support multiple document collections
+- Add metadata filtering
+- Implement evaluation metrics for retrieval quality
+- Containerize deployment with Docker
+- Add streaming LLM responses
+
+---
+
+## **Learning Objectives**
+
+This project focuses on understanding the core components of modern retrieval systems rather than relying on high-level frameworks.
+
+Key concepts demonstrated:
+
+- vector embeddings
+- semantic search
+- retrieval pipelines
+- prompt grounding
+- modular AI system design
+
+---
+
+## **License**
+*To be declared*
