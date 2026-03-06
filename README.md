@@ -51,10 +51,10 @@ rag-document-pipeline
 │   ├── embedder.py
 │   ├── pdfreader.py
 │   ├── vectorstore.py
-│   ├── query.py
 │   └── llm.py
 │
 ├── ingest.py
+├── query.py
 ├── requirements.txt
 ├── .env
 ├── .gitignore
