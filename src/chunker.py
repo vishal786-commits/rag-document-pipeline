@@ -34,6 +34,3 @@ def chunk_pages(pages: List[str], chunk_size: int = 900, chunk_overlap: int = 15
         # print("Starting new chunk at index:", start)
 
     return chunks
-
-
-

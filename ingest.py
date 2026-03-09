@@ -4,9 +4,9 @@ from src.embedder import embed_chunks
 from src.vectorstore import store_in_pinecone
 from typing import List
 
-pdf_path = "./data/The Problem of the Puer Aeternus.pdf"
+pdf_path = "./data/National Insurance Terms and Conditions for Private Car.pdf"
 
-def run():
+def ingest():
     # Step 1: Read PDF
     pages = read_pdf(pdf_path)
     
@@ -19,4 +19,4 @@ def run():
     store_in_pinecone(chunks, embeddings, namespace="")
 
 if __name__ == "__main__":
-    run()
+    ingest()

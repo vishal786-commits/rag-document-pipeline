@@ -5,7 +5,7 @@ from src.llm import query_llm_with_context
 Process user queries by embedding them, searching for relevant context, and generating responses.
 """
 
-def process_user_query(query: str):
+def answer(query: str):
 
     query_vector = embed_user_query(query)
 
@@ -16,5 +16,4 @@ def process_user_query(query: str):
 
 if __name__ == "__main__":
     user_query = input("Enter your query: ")
-    # user_query = "Is homosexuality bad according to marie louise von franz?"
-    process_user_query(user_query)
+    answer(user_query)
