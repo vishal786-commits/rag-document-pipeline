@@ -2,3 +2,8 @@ pypdf
 openai
 python-dotenv
 pinecone
+fastapi
+uvicorn
+streamlit
+python-multipart
+requests
