@@ -15,8 +15,6 @@ Large Language Models are powerful but lack access to external knowledge unless 
 
 This project implements a **minimal, modular RAG architecture** that can serve as the foundation for production document QA systems.
 
-Example use case implemented in this repository:  
-Indexing and querying *The Problem of the Puer Aeternus*.
 
 ---
 
