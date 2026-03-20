@@ -16,6 +16,6 @@ def ingest(pdf_path: str, namespace: str):
     store_in_pinecone(chunks, embeddings, namespace=namespace)
 
 if __name__ == "__main__":
-    pdf_path = "./data/National Insurance Terms and Conditions for Private Car.pdf"
+    pdf_path = "./data/National Insurance Terms and Conditions for Private Car.pdf"         
     ingest(pdf_path, namespace="test_namespace")
     print("Ingestion complete")

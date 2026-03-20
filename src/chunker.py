@@ -1,36 +1,29 @@
 from typing import List, Tuple
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 
 def chunk_pages(pages: List[str], chunk_size: int = 900, chunk_overlap: int = 150) -> List[str]:
-    """
-    Chunk the pages into smaller pieces with specified size and overlap.
-    
-    Args:
-        pages (List[str]): List of page texts.
-        chunk_size (int): Maximum number of characters in each chunk.
-        chunk_overlap (int): Number of overlapping characters between chunks.
-        
-    Returns:
-        List[str]: List of text chunks.
-    """
-    chunks: List[str] = []
 
     full_text = "\n".join(pages)
-    text_length = len(full_text)
 
-    if text_length == 0:
-        return chunks
+    if not full_text.strip():
+        return []
 
-    start = 0
-    while start < text_length:
-
-        end = min(start + chunk_size, text_length)
-        chunk = full_text[start:end].strip()
-        if chunk:
-            chunks.append(chunk)
-        
-        if end >= text_length:
-            break
-        start = end - chunk_overlap  # Move back by overlap for the next chunk
-        # print("Starting new chunk at index:", start)
+    text_splitter = RecursiveCharacterTextSplitter(
+        separators=[
+            "\n\n", # split by paragraphs first
+            "\n",   # then by lines
+            ". ",  # then by sentences
+            "! ",  # then by sentences
+            "? ",  # then by sentences
+            "; ", # then by sentences
+            ", ",  # then by clauses
+            " ",   # then by words
+            ""    # finally by characters
+        ],
+        chunk_size=chunk_size,
+        chunk_overlap=chunk_overlap,
+        length_function=len
+    )
+    chunks = text_splitter.split_text(full_text)           
 
     return chunks

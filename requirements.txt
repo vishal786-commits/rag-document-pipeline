@@ -7,3 +7,4 @@ uvicorn
 streamlit
 python-multipart
 requests
+langchain-text-splitters[all]

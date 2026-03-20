@@ -3,8 +3,8 @@ import uuid
 import os
 import shutil
 
-from ingest import ingest
-from query import answer
+from src.ingest import ingest
+from src.query import answer
 
 app = FastAPI()
 
