@@ -8,7 +8,7 @@ Upload any PDF and ask questions in plain English — DocMind retrieves the exac
 ## System Architecture
 
 <p align="center">
-  <img src="assets/System%20Architecture.png" alt="RAG System Architecture" width="800"/>
+  <img src="assets/System Architecture.svg" alt="RAG System Architecture" width="800"/>
 </p>
 
 **Pipeline flow:**
@@ -17,9 +17,11 @@ Upload any PDF and ask questions in plain English — DocMind retrieves the exac
 2. Split text into sentence-aware chunks (recursive character splitting)
 3. Generate vector embeddings via OpenAI
 4. Store vectors in Pinecone under a unique session namespace
-5. Convert user query into an embedding
-6. Retrieve top-k relevant chunks from Pinecone
-7. Generate a grounded answer using GPT with retrieved context
+5. Rewrite user query using LLM to fix spelling and grammar
+6. Embed the rewritten query
+7. Retrieve top-k chunks from Pinecone (dynamic — scales with document size)
+8. Rerank retrieved chunks using BM25 keyword scoring
+9. Generate a grounded answer using GPT with reranked context
 
 ---
 
@@ -52,17 +54,15 @@ rag-document-pipeline/
 
 ---
 
-## Module Responsibilities
-
 | Module | Description |
 |--------|-------------|
 | `pdfreader.py` | Extracts raw text from PDF, returns list of page strings |
 | `chunker.py` | Splits text using `RecursiveCharacterTextSplitter` — respects sentence boundaries |
 | `embedder.py` | Generates embeddings via OpenAI `text-embedding-ada-002` |
 | `vectorstore.py` | Upserts and queries Pinecone with session-scoped namespaces |
-| `llm.py` | Constructs prompt with retrieved context, calls GPT, returns answer |
-| `ingest.py` | Orchestrates the full ingestion pipeline |
-| `query.py` | Handles query embedding, retrieval, and answer generation with chat history |
+| `llm.py` | Query rewriting, prompt construction, LLM response generation |
+| `ingest.py` | Orchestrates ingestion pipeline, returns chunk count |
+| `query.py` | Query rewriting → embedding → dynamic retrieval → BM25 reranking → generation |
 | `main.py` | FastAPI routes: `GET /`, `POST /upload`, `POST /ask` |
 | `frontend/app.py` | Streamlit chat interface — upload, session management, chat history |
 
@@ -88,6 +88,7 @@ rag-document-pipeline/
 | Chunking | LangChain `RecursiveCharacterTextSplitter` |
 | Backend | FastAPI |
 | Frontend | Streamlit |
+| Reranking | BM25 (`rank-bm25`) |
 
 ---
 
