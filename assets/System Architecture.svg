@@ -1,0 +1,89 @@
+<svg width="100%" viewBox="0 0 680 420" xmlns="http://www.w3.org/2000/svg">
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+    <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  </marker>
+</defs>
+<rect width="680" height="420" fill="#0d1117" rx="12"/>
+<pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+  <circle cx="1" cy="1" r="0.8" fill="#ffffff" opacity="0.06"/>
+</pattern>
+<rect width="680" height="420" fill="url(#dots)" rx="12"/>
+<text x="340" y="32" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#f0f0f0" letter-spacing="0.3">DocMind — RAG Pipeline Architecture</text>
+<rect x="420" y="388" width="10" height="10" rx="2" fill="#10b981"/>
+<text x="434" y="398" font-family="sans-serif" font-size="10" fill="#888">Ingestion</text>
+<rect x="498" y="388" width="10" height="10" rx="2" fill="#7c3aed"/>
+<text x="512" y="398" font-family="sans-serif" font-size="10" fill="#888">Query</text>
+<rect x="566" y="388" width="10" height="10" rx="2" fill="#d97706"/>
+<text x="580" y="398" font-family="sans-serif" font-size="10" fill="#888">Shared</text>
+<g>
+  <rect x="20" y="80" width="96" height="52" rx="7" fill="#0d2a1f" stroke="#10b981" stroke-width="0.8"/>
+  <text x="68" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">PDF</text>
+  <text x="68" y="117" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#34d399">document</text>
+</g>
+<g>
+  <rect x="20" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="68" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">User</text>
+  <text x="68" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a78bfa">query</text>
+</g>
+<g>
+  <rect x="148" y="80" width="96" height="52" rx="7" fill="#0d2a1f" stroke="#10b981" stroke-width="0.8"/>
+  <text x="196" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">PDF reader</text>
+  <text x="196" y="117" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#34d399">extract text</text>
+</g>
+<g>
+  <rect x="276" y="80" width="96" height="52" rx="7" fill="#0d2a1f" stroke="#10b981" stroke-width="0.8"/>
+  <text x="324" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#6ee7b7">Chunker</text>
+  <text x="324" y="117" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#34d399">sentence-aware</text>
+</g>
+<g>
+  <rect x="404" y="80" width="96" height="52" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="0.8"/>
+  <text x="452" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#fcd34d">Embedder</text>
+  <text x="452" y="117" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">ada-002</text>
+</g>
+<g>
+  <rect x="532" y="155" width="108" height="60" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="1.2"/>
+  <text x="586" y="178" text-anchor="middle" font-family="sans-serif" font-size="13" font-weight="600" fill="#fcd34d">Pinecone</text>
+  <text x="586" y="196" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">vector store</text>
+</g>
+<g>
+  <rect x="148" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="196" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">Rewriter</text>
+  <text x="196" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a78bfa">fix spelling</text>
+</g>
+<g>
+  <rect x="276" y="268" width="96" height="52" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="0.8"/>
+  <text x="324" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#fcd34d">Embedder</text>
+  <text x="324" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">ada-002</text>
+</g>
+<g>
+  <rect x="404" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="452" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">BM25</text>
+  <text x="452" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a78bfa">reranker</text>
+</g>
+<g>
+  <rect x="532" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
+  <text x="580" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">LLM</text>
+  <text x="580" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a78bfa">GPT-3.5</text>
+</g>
+<g>
+  <rect x="532" y="340" width="96" height="44" rx="7" fill="#0d1a2e" stroke="#60a5fa" stroke-width="0.8"/>
+  <text x="580" y="358" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#93c5fd">Answer</text>
+  <text x="580" y="374" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#60a5fa">grounded</text>
+</g>
+<line x1="116" y1="106" x2="146" y2="106" stroke="#10b981" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="244" y1="106" x2="274" y2="106" stroke="#10b981" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="372" y1="106" x2="402" y2="106" stroke="#10b981" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="500" y1="115" x2="554" y2="155" stroke="#d97706" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="510" y="140" font-family="sans-serif" font-size="9" fill="#d97706">store</text>
+<line x1="116" y1="294" x2="146" y2="294" stroke="#7c3aed" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="244" y1="294" x2="274" y2="294" stroke="#7c3aed" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="372" y1="294" x2="402" y2="294" stroke="#7c3aed" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="500" y1="294" x2="530" y2="294" stroke="#7c3aed" stroke-width="1" marker-end="url(#arrow)"/>
+<line x1="580" y1="320" x2="580" y2="338" stroke="#60a5fa" stroke-width="1" marker-end="url(#arrow)"/>
+<path d="M372 294 L410 294 L410 215 L530 215" fill="none" stroke="#d97706" stroke-width="1" marker-end="url(#arrow)" stroke-dasharray="4 3"/>
+<text x="430" y="208" font-family="sans-serif" font-size="9" fill="#d97706">retrieve</text>
+<path d="M532 215 L452 215 L452 266" fill="none" stroke="#d97706" stroke-width="1" marker-end="url(#arrow)"/>
+<text x="20" y="70" font-family="sans-serif" font-size="9" font-weight="700" fill="#10b981" letter-spacing="2" opacity="0.8">INGESTION</text>
+<text x="20" y="258" font-family="sans-serif" font-size="9" font-weight="700" fill="#7c3aed" letter-spacing="2" opacity="0.8">QUERY</text>
+</svg>
