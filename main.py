@@ -8,7 +8,7 @@ from src.query import answer
 
 app = FastAPI()
 
-#store memory per session
+# Store memory per session
 chat_memory = {}
 
 # Directory to store uploaded PDFs
@@ -19,6 +19,7 @@ if not os.path.exists(UPLOAD_DIR):
 @app.get("/")
 def root():
     return {"message": "Welcome! RAG API is running."}
+
 # ---------------------------------------------------
 # Upload PDF endpoint
 # ---------------------------------------------------
@@ -34,33 +35,38 @@ async def upload_pdf(file: UploadFile = File(...)):
     with open(file_path, "wb") as buffer:
         shutil.copyfileobj(file.file, buffer)
 
-    # Ingest PDF into Pinecone namespace
-    ingest(file_path, namespace=session_id)
+    # Ingest PDF into Pinecone namespace, returns chunk count
+    chunk_count = ingest(file_path, namespace=session_id)
 
-    # Initialize chat memory
-    chat_memory[session_id] = []
+    # Initialize chat memory with history and chunk count
+    chat_memory[session_id] = {
+        "history": [],
+        "chunk_count": chunk_count
+    }
 
     return {
         "message": "PDF uploaded and ingested successfully",
         "session_id": session_id
     }
+
 # ---------------------------------------------------
 # Ask question endpoint
 # ---------------------------------------------------
 @app.post("/ask")
 async def ask_question(session_id: str, question: str):
 
-    # Retrieve chat history
-    history = chat_memory.get(session_id, [])
+    # Retrieve session — fallback if session not found
+    session = chat_memory.get(session_id, {"history": [], "chunk_count": 20})
+    history = session["history"]
+    chunk_count = session["chunk_count"]
 
     # Get answer
-    response = answer(question, session_id, history)
+    response = answer(question, session_id, history, chunk_count=chunk_count)
 
     # Update memory
-    history.append((question, response))
-    chat_memory[session_id] = history
+    session["history"].append((question, response))
+    chat_memory[session_id] = session
 
     return {
         "answer": response
-    } 
-            
+    }

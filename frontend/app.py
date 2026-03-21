@@ -859,12 +859,8 @@ else:
                 </div>
             """, unsafe_allow_html=True)
         else:
-            st.markdown(f"""
-                <div class="msg-row bot">
-                    <div class="avatar avatar-bot">✦</div>
-                    <div class="bubble-bot">{message["content"]}</div>
-                </div>
-            """, unsafe_allow_html=True)
+            with st.chat_message("assistant"):
+                st.markdown(message["content"])
 
     # Typing indicator when thinking
     if st.session_state.is_thinking:
