@@ -43,11 +43,9 @@ rag-document-pipeline/
 │   └── app.py            # Streamlit UI
 │
 ├── assets/
-│   └── System Architecture.png
+│   └── System Architecture.svg
 │
 ├── main.py               # FastAPI entry point
-├── .env                  # API keys (not committed)
-├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
