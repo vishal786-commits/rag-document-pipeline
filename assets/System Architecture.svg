@@ -9,7 +9,7 @@
   <circle cx="1" cy="1" r="0.8" fill="#ffffff" opacity="0.06"/>
 </pattern>
 <rect width="680" height="420" fill="url(#dots)" rx="12"/>
-<text x="340" y="32" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#f0f0f0" letter-spacing="0.3">DocMind — RAG Pipeline Architecture</text>
+<text x="340" y="32" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="600" fill="#f0f0f0" letter-spacing="0.3">DocMind — RAG System Architecture</text>
 <rect x="420" y="388" width="10" height="10" rx="2" fill="#10b981"/>
 <text x="434" y="398" font-family="sans-serif" font-size="10" fill="#888">Ingestion</text>
 <rect x="498" y="388" width="10" height="10" rx="2" fill="#7c3aed"/>
@@ -39,7 +39,7 @@
 <g>
   <rect x="404" y="80" width="96" height="52" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="0.8"/>
   <text x="452" y="101" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#fcd34d">Embedder</text>
-  <text x="452" y="117" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">ada-002</text>
+  <text x="452" y="117" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#fbbf24">text-embedding-3-small</text>
 </g>
 <g>
   <rect x="532" y="155" width="108" height="60" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="1.2"/>
@@ -54,7 +54,7 @@
 <g>
   <rect x="276" y="268" width="96" height="52" rx="7" fill="#2a1a00" stroke="#d97706" stroke-width="0.8"/>
   <text x="324" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#fcd34d">Embedder</text>
-  <text x="324" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#fbbf24">ada-002</text>
+  <text x="324" y="305" text-anchor="middle" font-family="sans-serif" font-size="8.5" fill="#fbbf24">text-embedding-3-small</text>
 </g>
 <g>
   <rect x="404" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
@@ -64,7 +64,7 @@
 <g>
   <rect x="532" y="268" width="96" height="52" rx="7" fill="#1a0d2e" stroke="#7c3aed" stroke-width="0.8"/>
   <text x="580" y="289" text-anchor="middle" font-family="sans-serif" font-size="12" font-weight="600" fill="#c4b5fd">LLM</text>
-  <text x="580" y="305" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#a78bfa">GPT-3.5</text>
+  <text x="580" y="305" text-anchor="middle" font-family="sans-serif" font-size="9" fill="#a78bfa">gpt-3.5-turbo</text>
 </g>
 <g>
   <rect x="532" y="340" width="96" height="44" rx="7" fill="#0d1a2e" stroke="#60a5fa" stroke-width="0.8"/>

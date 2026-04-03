@@ -1,7 +1,7 @@
 # DocMind — RAG Document Pipeline
 
 A modular **Retrieval-Augmented Generation (RAG)** system with a FastAPI backend and Streamlit frontend.  
-Upload any PDF and ask questions in plain English — DocMind retrieves the exact context and answers precisely.
+Upload a PDF and ask questions in plain English — DocMind retrieves relevant context and answers using that context.
 
 ---
 
@@ -17,11 +17,11 @@ Upload any PDF and ask questions in plain English — DocMind retrieves the exac
 2. Split text into sentence-aware chunks (recursive character splitting)
 3. Generate vector embeddings via OpenAI
 4. Store vectors in Pinecone under a unique session namespace
-5. Rewrite user query using LLM to fix spelling and grammar
+5. Rewrite the user query with the LLM (spelling / grammar / clarity)
 6. Embed the rewritten query
 7. Retrieve top-k chunks from Pinecone (dynamic — scales with document size)
 8. Rerank retrieved chunks using BM25 keyword scoring
-9. Generate a grounded answer using GPT with reranked context
+9. Generate a grounded answer with GPT using reranked context
 
 ---
 
@@ -37,13 +37,13 @@ rag-document-pipeline/
 │   ├── vectorstore.py    # Pinecone upsert and retrieval
 │   ├── llm.py            # LLM prompt construction and response
 │   ├── ingest.py         # ingestion pipeline (read → chunk → embed → store)
-│   └── query.py          # query pipeline (embed → retrieve → generate)
+│   └── query.py          # query pipeline (rewrite → embed → retrieve → rerank → generate)
 │
 ├── frontend/
 │   └── app.py            # Streamlit UI
 │
 ├── assets/
-│   └── System Architecture.png
+│   └── System Architecture.svg
 │
 ├── main.py               # FastAPI entry point
 ├── .env                  # API keys (not committed)
@@ -58,9 +58,9 @@ rag-document-pipeline/
 |--------|-------------|
 | `pdfreader.py` | Extracts raw text from PDF, returns list of page strings |
 | `chunker.py` | Splits text using `RecursiveCharacterTextSplitter` — respects sentence boundaries |
-| `embedder.py` | Generates embeddings via OpenAI `text-embedding-ada-002` |
+| `embedder.py` | Generates embeddings via OpenAI `text-embedding-3-small` |
 | `vectorstore.py` | Upserts and queries Pinecone with session-scoped namespaces |
-| `llm.py` | Query rewriting, prompt construction, LLM response generation |
+| `llm.py` | Query rewriting, prompt construction, LLM response (`gpt-3.5-turbo`) |
 | `ingest.py` | Orchestrates ingestion pipeline, returns chunk count |
 | `query.py` | Query rewriting → embedding → dynamic retrieval → BM25 reranking → generation |
 | `main.py` | FastAPI routes: `GET /`, `POST /upload`, `POST /ask` |
@@ -73,8 +73,10 @@ rag-document-pipeline/
 | Method | Endpoint | Description |
 |--------|----------|-------------|
 | GET | `/` | Health check |
-| POST | `/upload` | Upload a PDF, returns `session_id` |
-| POST | `/ask` | Ask a question, returns answer with chat history context |
+| POST | `/upload` | Upload a PDF (`multipart/form-data` field `file`); returns `session_id` |
+| POST | `/ask` | Query params: `session_id`, `question` — returns `answer` (uses server-side chat history for that session) |
+
+The Streamlit app expects the API at `http://localhost:8000` by default (`frontend/app.py`).
 
 ---
 
@@ -82,8 +84,8 @@ rag-document-pipeline/
 
 | Layer | Technology |
 |-------|------------|
-| LLM | OpenAI GPT |
-| Embeddings | OpenAI `text-embedding-ada-002` |
+| LLM | OpenAI `gpt-3.5-turbo` |
+| Embeddings | OpenAI `text-embedding-3-small` |
 | Vector DB | Pinecone |
 | Chunking | LangChain `RecursiveCharacterTextSplitter` |
 | Backend | FastAPI |
@@ -95,6 +97,7 @@ rag-document-pipeline/
 ## Running Locally
 
 **1. Clone and install:**
+
 ```bash
 git clone https://github.com/vishal786-commits/rag-document-pipeline.git
 cd rag-document-pipeline
@@ -102,25 +105,28 @@ pip install -r requirements.txt
 ```
 
 **2. Set up environment variables in `.env`:**
-```
+
+```env
 OPENAI_API_KEY=your_key
 PINECONE_API_KEY=your_key
-PINECONE_INDEX=your_index
+PINECONE_INDEX_NAME=your_index_name
 ```
 
+Variable names must match what the code loads (`PINECONE_INDEX_NAME` in `src/vectorstore.py`).
+
 **3. Start the backend:**
+
 ```bash
 uvicorn main:app --reload
 ```
 
 **4. Start the frontend:**
+
 ```bash
 streamlit run frontend/app.py
 ```
 
 Then open `http://localhost:8501`.
-
-
 
 ---
 
