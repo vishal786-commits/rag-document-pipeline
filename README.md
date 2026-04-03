@@ -46,8 +46,6 @@ rag-document-pipeline/
 │   └── System Architecture.svg
 │
 ├── main.py               # FastAPI entry point
-├── .env                  # API keys (not committed)
-├── .gitignore
 ├── requirements.txt
 └── README.md
 ```
