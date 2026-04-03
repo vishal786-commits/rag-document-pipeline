@@ -1,0 +1,16 @@
+.git
+.gitignore
+.venv
+venv
+__pycache__
+*.py[cod]
+*$py.class
+.Python
+.env
+.env.*
+!.env.example
+uploaded_pdfs
+*.md
+assets
+.cursor
+README.md

@@ -44,6 +44,5 @@ def answer(query: str, namespace: str, chat_history: list, chunk_count: int = 20
     query_vector = embed_user_query(rewritten_query)
     matched_chunks = search_in_pinecone(query_vector, top_k=retrieve_k, namespace=namespace)
     reranked_chunks = rerank_with_bm25(rewritten_query, matched_chunks, top_k=rerank_k)
-
     context = "\n\n".join(reranked_chunks)
     return query_llm_with_context(query, context, chat_history)
