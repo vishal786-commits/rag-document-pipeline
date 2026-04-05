@@ -49,19 +49,29 @@ jobs:
             -e PINECONE_API_KEY=dummy \
             $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-          sleep 20
+          echo "Waiting for container to boot..."
 
-          HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8000/health)
-          echo "Health check returned: $HTTP_CODE"
+          for i in $(seq 1 20); do
+            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
+              --connect-timeout 2 \
+              http://localhost:8000/health 2>/dev/null || echo "000")
 
+            echo "Attempt $i: HTTP $HTTP_CODE"
+
+            if [ "$HTTP_CODE" = "200" ]; then
+              echo "PASS: container is healthy"
+              docker stop docmind-test
+              exit 0
+            fi
+
+            sleep 3
+          done
+
+          echo "FAIL: container did not become healthy after 60 seconds"
+          echo "--- Container logs ---"
+          docker logs docmind-test
           docker stop docmind-test
-
-          if [ "$HTTP_CODE" != "200" ]; then
-            echo "FAIL: health check returned $HTTP_CODE"
-            exit 1
-          fi
-
-          echo "PASS: container is healthy"
+          exit 1
 
       - name: Push Docker image to ECR
         env:
