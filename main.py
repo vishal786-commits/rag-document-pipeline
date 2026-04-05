@@ -6,7 +6,9 @@ import shutil
 from src.ingest import ingest
 from src.query import answer
 
+import time
 app = FastAPI()
+
 
 # Store memory per session
 chat_memory = {}
@@ -16,10 +18,13 @@ UPLOAD_DIR = "uploaded_pdfs"
 if not os.path.exists(UPLOAD_DIR):
     os.makedirs(UPLOAD_DIR, exist_ok=True)
 
+@app.get("/health")
+async def health():
+    return {"status": "healthy", "service": "docmind", "timestamp": time.time()}
+
 @app.get("/")
 def root():
     return {"message": "Welcome! RAG API is running."}
-
 # ---------------------------------------------------
 # Upload PDF endpoint
 # ---------------------------------------------------
