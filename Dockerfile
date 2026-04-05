@@ -1,9 +1,10 @@
-FROM python:3.9-slim
+FROM python:3.11-slim
+
 WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
-    PIP_NO_CACHE_DIR=1 \
-    API_URL=http://127.0.0.1:8000
+    PIP_NO_CACHE_DIR=1 
+    
 
 COPY requirements.txt .
 RUN pip install -r requirements.txt
