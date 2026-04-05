@@ -85,7 +85,7 @@ jobs:
         run: |
           aws ecs describe-task-definition \
             --task-definition ${{ secrets.ECS_TASK_DEFINITION }} \
-            --query taskDefinition | {family: family, containerDefinitions: containerDefinitions, executionRoleArn: executionRoleArn, networkMode: networkMode, requiresCompatibilities: requiresCompatibilities, cpu: cpu, memory: memory}' \
+            --query 'taskDefinition | {family: family, containerDefinitions: containerDefinitions, executionRoleArn: executionRoleArn, networkMode: networkMode, requiresCompatibilities: requiresCompatibilities, cpu: cpu, memory: memory}' \
             > task-definition.json
 
       - name: Inject new image into task definition
