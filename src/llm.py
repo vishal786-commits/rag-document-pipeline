@@ -1,6 +1,7 @@
 from openai import OpenAI
 from dotenv import load_dotenv
 import os
+import asyncio
 
 load_dotenv()
 
@@ -9,13 +10,14 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 LLM_MODEL = "gpt-3.5-turbo"
 
 
-def rewrite_query(query: str) -> str:
+async def rewrite_query(query: str) -> str:
     """
     Rewrite the user query to fix spelling, grammar, and clarity
     before embedding. Better query = better retrieval.
     """
     try:
-        response = client.chat.completions.create(
+        response = await asyncio.to_thread(
+            client.chat.completions.create,
             model=LLM_MODEL,
             messages=[
                 {
@@ -23,7 +25,7 @@ def rewrite_query(query: str) -> str:
                     "content": (
                         "You are a query rewriting assistant. "
                         "Fix spelling mistakes and grammar errors only. "
-                        "If the query is already clear and correct, return it unchanged. " 
+                        "If the query is already clear and correct, return it unchanged. "
                         "Keep the meaning identical — do not add information or change what is being asked. "
                         "Return only the rewritten question, nothing else. No explanation, no preamble."
                     )
@@ -33,7 +35,7 @@ def rewrite_query(query: str) -> str:
                     "content": query
                 }
             ],
-            temperature=0.0  # deterministic — we want consistent rewrites
+            temperature=0.0
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
@@ -41,7 +43,7 @@ def rewrite_query(query: str) -> str:
         return query  # fallback — never let a rewrite failure break the whole pipeline
 
 
-def query_llm_with_context(query: str, context: str, chat_history: list) -> str:
+async def query_llm_with_context(query: str, context: str, chat_history: list) -> str:
     """
     Query the LLM using context + conversation history.
     """
@@ -81,7 +83,8 @@ def query_llm_with_context(query: str, context: str, chat_history: list) -> str:
             "content": f"Context:\n{context}\n\nQuestion:\n{query}"
         })
 
-        response = client.chat.completions.create(
+        response = await asyncio.to_thread(
+            client.chat.completions.create,
             model=LLM_MODEL,
             messages=messages,
             temperature=0.5

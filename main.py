@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File
 import uuid
 import os
-import shutil
+import asyncio
 
 from src.ingest import ingest
 from src.query import answer
@@ -17,6 +17,11 @@ chat_memory = {}
 UPLOAD_DIR = "uploaded_pdfs"
 if not os.path.exists(UPLOAD_DIR):
     os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+
+def _write_bytes_to_file(path: str, data: bytes) -> None:
+    with open(path, "wb") as buffer:
+        buffer.write(data)
 
 @app.get("/health")
 async def health():
@@ -37,11 +42,11 @@ async def upload_pdf(file: UploadFile = File(...)):
     # Save uploaded PDF
     file_path = os.path.join(UPLOAD_DIR, file.filename)
 
-    with open(file_path, "wb") as buffer:
-        shutil.copyfileobj(file.file, buffer)
+    file_bytes = await file.read()
+    await asyncio.to_thread(_write_bytes_to_file, file_path, file_bytes)
 
     # Ingest PDF into Pinecone namespace, returns chunk count
-    chunk_count = ingest(file_path, namespace=session_id)
+    chunk_count = await ingest(file_path, namespace=session_id)
 
     # Initialize chat memory with history and chunk count
     chat_memory[session_id] = {
@@ -66,7 +71,7 @@ async def ask_question(session_id: str, question: str):
     chunk_count = session["chunk_count"]
 
     # Get answer
-    response = answer(question, session_id, history, chunk_count=chunk_count)
+    response = await answer(question, session_id, history, chunk_count=chunk_count)
 
     # Update memory
     session["history"].append((question, response))

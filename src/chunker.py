@@ -1,7 +1,8 @@
-from typing import List, Tuple
+from typing import List
 from langchain_text_splitters import RecursiveCharacterTextSplitter
+import asyncio
 
-def chunk_pages(pages: List[str], chunk_size: int = 900, chunk_overlap: int = 150) -> List[str]:
+async def chunk_pages(pages: List[str], chunk_size: int = 900, chunk_overlap: int = 150) -> List[str]:
 
     full_text = "\n".join(pages)
 
@@ -24,6 +25,6 @@ def chunk_pages(pages: List[str], chunk_size: int = 900, chunk_overlap: int = 15
         chunk_overlap=chunk_overlap,
         length_function=len
     )
-    chunks = text_splitter.split_text(full_text)           
+    chunks = await asyncio.to_thread(text_splitter.split_text, full_text)
 
     return chunks

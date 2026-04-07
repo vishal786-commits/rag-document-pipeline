@@ -2,6 +2,7 @@ from pinecone import Pinecone
 import os
 from dotenv import load_dotenv
 from typing import List
+import asyncio
 
 load_dotenv()
 
@@ -16,7 +17,7 @@ def get_index():
     return _index
 
 
-def store_in_pinecone(chunks: List[str], embeddings: List[List[float]], namespace: str = ""):
+async def store_in_pinecone(chunks: List[str], embeddings: List[List[float]], namespace: str = ""):
     """
     Store the text chunks and their corresponding embeddings in Pinecone.
 
@@ -45,7 +46,7 @@ def store_in_pinecone(chunks: List[str], embeddings: List[List[float]], namespac
         batch_size = 100
         for i in range(0, len(vectors), batch_size):
             batch = vectors[i:i + batch_size]
-            index.upsert(vectors=batch, namespace=namespace)
+            await asyncio.to_thread(index.upsert, vectors=batch, namespace=namespace)
 
         print(f"Successfully stored {len(chunks)} chunks in Pinecone under namespace '{namespace}'.")
 
@@ -53,7 +54,7 @@ def store_in_pinecone(chunks: List[str], embeddings: List[List[float]], namespac
         print(f"Error storing in Pinecone: {e}")
 
 
-def search_in_pinecone(query_embedding: List[float], top_k: int = 10, namespace: str = "") -> List[dict]:
+async def search_in_pinecone(query_embedding: List[float], top_k: int = 10, namespace: str = "") -> List[dict]:
     """
     Search for similar chunks in Pinecone based on a query embedding.
 
@@ -67,7 +68,8 @@ def search_in_pinecone(query_embedding: List[float], top_k: int = 10, namespace:
     """
     try:
         index = get_index()
-        response = index.query(
+        response = await asyncio.to_thread(
+            index.query,
             vector=query_embedding,
             top_k=top_k,
             include_metadata=True,

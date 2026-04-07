@@ -1,12 +1,13 @@
 import os
 from pypdf import PdfReader
+import asyncio
 
-def read_pdf(pdf_path):
+async def read_pdf(pdf_path):
     if not os.path.exists(pdf_path):
         raise FileNotFoundError(f"PDF file not found: {pdf_path}")
     
     try:
-        reader = PdfReader(pdf_path)
+        reader = await asyncio.to_thread(PdfReader, pdf_path)
         pages = [page.extract_text() for page in reader.pages]
         return pages
     except Exception as e:
