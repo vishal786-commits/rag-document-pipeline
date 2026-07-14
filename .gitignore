@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 uploaded_pdfs/
 .docker/
+eval/.cache/
+.corpus/
