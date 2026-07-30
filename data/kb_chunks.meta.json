@@ -1,0 +1,7 @@
+{
+  "ingested_at": "2026-07-30T16:24:09.246772+00:00",
+  "namespace": "knowledgebase",
+  "chunk_count": 687,
+  "embed_model": "text-embedding-3-small",
+  "sha256": "f044f78b68ff44612b9b5457e91e0544f9bbcd81e147f688098caa93717501fa"
+}
