@@ -28,6 +28,7 @@ PINECONE_NAMESPACE = os.getenv("PINECONE_NAMESPACE", "knowledgebase")
 
 # ── Models ──────────────────────────────────────────────────────────────────
 CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-4.1-mini")
+LLM_SEED = 0  # best-effort reproducibility; temperature=0 alone is not enough
 EMBED_MODEL = os.getenv("OPENAI_EMBED_MODEL", "text-embedding-3-small")
 EMBED_DIM = 1536
 EMBED_BATCH = 128
