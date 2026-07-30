@@ -17,13 +17,13 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field
 
 from rag import config
-from rag.generate import answer as generate_answer
+from rag.graph import build_graph, run as run_graph
 from rag.retriever import KBRetriever
 
 logging.basicConfig(level=logging.INFO, format="%(levelname)s %(message)s")
 log = logging.getLogger("docmind")
 
-state: dict[str, KBRetriever | None] = {"retriever": None}
+state: dict = {"retriever": None, "graph": None}
 
 
 @asynccontextmanager
@@ -32,6 +32,7 @@ async def lifespan(app: FastAPI):
     try:
         retriever = KBRetriever()
         state["retriever"] = retriever
+        state["graph"] = build_graph(retriever)
         log.info("Loaded %d chunks for BM25.", len(retriever.docs))
 
         counts = retriever.audience_counts()
@@ -105,15 +106,26 @@ async def policies():
 
 @app.post("/ask")
 async def ask(request: AskRequest):
-    retriever = get_retriever()
+    get_retriever()  # 503 early if the knowledge base failed to load
     started = time.perf_counter()
 
-    hits = retriever.search(
+    result = run_graph(
+        state["graph"],
         request.question,
         audience=request.audience,
         status=request.status,
         doc_id=request.doc_id,
+        history=request.history,
     )
-    result = generate_answer(request.question, hits, history=request.history)
     result["latency_ms"] = round((time.perf_counter() - started) * 1000)
+
+    # Per-node timings and the retry rate are what tell us, later, whether the
+    # grade/rewrite loop is paying for its latency.
+    log.info(
+        "route=%s attempts=%s total=%sms nodes=%s",
+        result["route"],
+        result["attempts"],
+        result["latency_ms"],
+        result["timings"],
+    )
     return result

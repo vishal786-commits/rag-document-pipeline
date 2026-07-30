@@ -28,7 +28,7 @@ from rag.config import (
     MAX_CHUNK_CHARS,
 )
 
-LEVEL_KEYS = [key for _marker, key in HEADER_LEVELS]  # ["h1", ... "h5"]
+LEVEL_KEYS = [level[1] for level in HEADER_LEVELS]  # ["h1", ... "h5"]
 
 
 def clean_heading(text: str) -> str:
