@@ -122,9 +122,10 @@ async def ask(request: AskRequest):
     # Per-node timings and the retry rate are what tell us, later, whether the
     # grade/rewrite loop is paying for its latency.
     log.info(
-        "route=%s attempts=%s total=%sms nodes=%s",
+        "route=%s attempts=%s tools=%s total=%sms nodes=%s",
         result["route"],
         result["attempts"],
+        result["tool_calls"],
         result["latency_ms"],
         result["timings"],
     )

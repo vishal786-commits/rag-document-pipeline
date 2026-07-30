@@ -6,8 +6,8 @@ import os
 API_URL = os.environ.get("API_URL", "http://localhost:8000")
 
 st.set_page_config(
-    page_title="DocMind",
-    page_icon="âœ¦",
+    page_title="Aster Policy Assistant",
+    page_icon="✦",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -17,7 +17,7 @@ st.markdown("""
 
 <style>
 
-/* â”€â”€â”€ Reset & Base â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Reset & Base ─────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html, body, .stApp {
@@ -54,7 +54,7 @@ html, body, .stApp {
     pointer-events: none;
 }
 
-/* â”€â”€â”€ Sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Sidebar ──────────────────────────────────────── */
 [data-testid="stSidebar"] {
     background: rgba(10, 30, 18, 0.65) !important;
     backdrop-filter: blur(28px) saturate(180%);
@@ -67,7 +67,7 @@ html, body, .stApp {
     padding: 28px 20px;
 }
 
-/* â”€â”€â”€ Sidebar Logo / Brand â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Sidebar Logo / Brand ─────────────────────────── */
 .brand {
     display: flex;
     align-items: center;
@@ -96,7 +96,7 @@ html, body, .stApp {
     -webkit-text-fill-color: transparent;
 }
 
-/* â”€â”€â”€ Sidebar Section Labels â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Sidebar Section Labels ───────────────────────── */
 .sidebar-label {
     font-size: 10px;
     font-weight: 600;
@@ -107,7 +107,7 @@ html, body, .stApp {
     margin-top: 8px;
 }
 
-/* â”€â”€â”€ Upload Zone â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Upload Zone ──────────────────────────────────── */
 .upload-zone {
     background: rgba(16, 185, 129, 0.05);
     border: 1.5px dashed rgba(52, 211, 152, 0.25);
@@ -143,7 +143,7 @@ html, body, .stApp {
     margin-bottom: 4px;
 }
 
-/* â”€â”€â”€ Status Cards â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Status Cards ─────────────────────────────────── */
 .status-card {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(52, 211, 152, 0.1);
@@ -203,11 +203,11 @@ html, body, .stApp {
 }
 .reset-hint:hover { color: rgba(239, 68, 68, 0.85); }
 
-/* â”€â”€â”€ Hide Streamlit chrome â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Hide Streamlit chrome ────────────────────────── */
 #MainMenu, footer, header { visibility: hidden; }
 [data-testid="stToolbar"] { display: none; }
 
-/* â”€â”€ Sidebar collapse / expand tab â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ── Sidebar collapse / expand tab ─────────────────── */
 /* Always keep it visible and styled */
 [data-testid="collapsedControl"] {
     display: flex !important;
@@ -310,13 +310,13 @@ html, body, .stApp {
     box-shadow: 0 4px 20px rgba(16,185,129,0.1) !important;
 }
 
-/* â”€â”€â”€ Main Column Padding â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Main Column Padding ──────────────────────────── */
 .main .block-container {
     padding: 0 !important;
     max-width: 100% !important;
 }
 
-/* â”€â”€â”€ Welcome Screen â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Welcome Screen ───────────────────────────────── */
 .welcome-wrap {
     display: flex;
     flex-direction: column;
@@ -382,7 +382,7 @@ html, body, .stApp {
     justify-content: center;
 }
 
-/* Hint buttons â€” styled via Streamlit button override below */
+/* Hint buttons — styled via Streamlit button override below */
 div[data-testid="stHorizontalBlock"] .stButton button,
 .hint-btn-wrap .stButton button {
     background: rgba(255,255,255,0.04) !important;
@@ -407,7 +407,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     box-shadow: 0 4px 16px rgba(16,185,129,0.15) !important;
 }
 
-/* â”€â”€â”€ Chat Area â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Chat Area ────────────────────────────────────── */
 .chat-area {
     padding: 32px 24px 140px;
     max-width: 640px;
@@ -416,7 +416,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     z-index: 1;
 }
 
-/* â”€â”€â”€ Messages â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Messages ─────────────────────────────────────── */
 .msg-row {
     display: flex;
     margin-bottom: 20px;
@@ -431,7 +431,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
 .msg-row.user  { justify-content: flex-end; }
 .msg-row.bot   { justify-content: flex-start; }
 
-/* User bubble â€” deep royal blue */
+/* User bubble — deep royal blue */
 .bubble-user {
     background: linear-gradient(135deg, #1d4ed8, #2563eb);
     color: #fff;
@@ -446,7 +446,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     word-wrap: break-word;
 }
 
-/* Bot bubble â€” glass light-blue / green tinted */
+/* Bot bubble — glass light-blue / green tinted */
 .bubble-bot {
     background: rgba(209, 250, 229, 0.06);
     border: 1px solid rgba(52, 211, 152, 0.15);
@@ -513,7 +513,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     40%            { transform: scale(1.1); opacity: 1; }
 }
 
-/* â”€â”€â”€ Chat Input â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Chat Input ───────────────────────────────────── */
 /* Float the input bar above bottom */
 [data-testid="stBottom"] {
     background: transparent !important;
@@ -551,7 +551,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     box-shadow: 0 0 16px rgba(16,185,129,0.4) !important;
 }
 
-/* â”€â”€â”€ File uploader override â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── File uploader override ───────────────────────── */
 [data-testid="stFileUploader"] {
     background: transparent !important;
 }
@@ -578,7 +578,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     font-size: 12px !important;
 }
 
-/* Button overrides â€” sidebar remove doc button */
+/* Button overrides — sidebar remove doc button */
 [data-testid="stSidebar"] .stButton button {
     background: rgba(239,68,68,0.1) !important;
     color: rgba(252,165,165,0.8) !important;
@@ -613,7 +613,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
 ::-webkit-scrollbar-thumb { background: rgba(52,211,152,0.2); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(52,211,152,0.4); }
 
-/* â”€â”€â”€ Main Upload Zone â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+/* ─── Main Upload Zone ─────────────────────────────── */
 .main-upload-zone {
     margin-top: 4px;
 }
@@ -649,7 +649,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
 """, unsafe_allow_html=True)
 
 
-# â”€â”€â”€ API helpers â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─── API helpers ────────────────────────────────────────────
 @st.cache_data(ttl=60)
 def fetch_policies():
     """The policy list, from the API. Cached so the sidebar is cheap."""
@@ -672,7 +672,7 @@ def fetch_health():
         return None, f"{type(e).__name__}: {e}"
 
 
-# â”€â”€â”€ Session State â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─── Session State ──────────────────────────────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = []
 if "is_thinking" not in st.session_state:
@@ -682,16 +682,16 @@ policies, policies_error = fetch_policies()
 health, health_error = fetch_health()
 
 
-# â”€â”€â”€ Sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─── Sidebar ────────────────────────────────────────────────
 with st.sidebar:
     st.markdown("""
         <div class="brand">
-            <div class="brand-icon">âœ¦</div>
+            <div class="brand-icon">✦</div>
             <div class="brand-name">Aster Policy Assistant</div>
         </div>
     """, unsafe_allow_html=True)
 
-    # â”€â”€ Connection (a real probe, not a hardcoded green dot) â”€â”€
+    # ── Connection (a real probe, not a hardcoded green dot) ──
     st.markdown('<div class="sidebar-label">Status</div>', unsafe_allow_html=True)
     if health:
         ready = health.get("knowledge_base") == "ready"
@@ -726,14 +726,14 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
-    if st.session_state.messages and st.button("âœ• Clear conversation"):
+    if st.session_state.messages and st.button("✕ Clear conversation"):
         st.session_state.messages = []
         st.rerun()
 
-    # â”€â”€ Policies in the knowledge base â”€â”€
+    # ── Policies in the knowledge base ──
     st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
     st.markdown(
-        f'<div class="sidebar-label">Knowledge base Â· {len(policies)} policies</div>',
+        f'<div class="sidebar-label">Knowledge base · {len(policies)} policies</div>',
         unsafe_allow_html=True,
     )
 
@@ -744,12 +744,12 @@ with st.sidebar:
         if expired:
             st.markdown(
                 f'<div style="font-size:11px; color:#f0b429; margin-bottom:8px;">'
-                f'âš  {len(expired)} past their review date</div>',
+                f'⚠ {len(expired)} past their review date</div>',
                 unsafe_allow_html=True,
             )
         with st.expander("Browse policies"):
             for p in policies:
-                badge = " âš " if p["status"] == "expired" else ""
+                badge = " ⚠" if p["status"] == "expired" else ""
                 st.markdown(
                     f'<div style="font-size:11px; padding:3px 0; '
                     f'color:rgba(232,245,238,0.7);">{p["title"]}{badge}</div>',
@@ -757,25 +757,32 @@ with st.sidebar:
                 )
 
 
-# â”€â”€â”€ Main Area â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─── Main Area ──────────────────────────────────────────────
 
 SUGGESTED_QUESTIONS = [
-    ("ðŸ ", "How quickly must we respond to a report of damp and mould?"),
-    ("ðŸ”§", "What are a tenant's responsibilities for reporting repairs?"),
-    ("ðŸ”¥", "What does the Fire Safety Policy require for risk assessments?"),
-    ("âš–ï¸", "How does the complaints process work and what are the timescales?"),
-    ("ðŸ›¡ï¸", "What support is available under the Domestic Abuse Policy?"),
-    ("ðŸ“‹", "Which policies are past their review date?"),
+    ("🏠", "How quickly must we respond to a report of damp and mould?"),
+    ("🔧", "What are a tenant's responsibilities for reporting repairs?"),
+    ("🔥", "What does the Fire Safety Policy require for risk assessments?"),
+    ("⚖️", "How does the complaints process work and what are the timescales?"),
+    ("🛡️", "What support is available under the Domestic Abuse Policy?"),
+    ("📋", "Which policies are past their review date?"),
 ]
 
 
 def render_answer(message):
     """An assistant turn: the answer, an expiry banner, and its citations."""
     with st.chat_message("assistant"):
+        if message.get("needs_clarification"):
+            # The assistant asked rather than guessed; the user's reply arrives
+            # as the next question, so nothing is needed beyond a hint.
+            st.markdown(message["content"])
+            st.caption("Reply below and I'll search for that.")
+            return
+
         st.markdown(message["content"])
 
         if message.get("expired_warning"):
-            st.warning(message["expired_warning"], icon="âš ï¸")
+            st.warning(message["expired_warning"], icon="⚠️")
 
         citations = message.get("citations") or []
         if citations:
@@ -792,9 +799,9 @@ def render_answer(message):
                         "retrieved is listed."
                     )
                 for c in citations:
-                    flag = " Â· expired" if c["status"] == "expired" else ""
+                    flag = " · expired" if c["status"] == "expired" else ""
                     st.markdown(
-                        f"**[{c['n']}] {c['source_file']}** â€” page {c['page']}{flag}  \n"
+                        f"**[{c['n']}] {c['source_file']}** — page {c['page']}{flag}  \n"
                         f'<span style="font-size:11px; color:rgba(232,245,238,0.5);">'
                         f"{c['heading_path']}</span>",
                         unsafe_allow_html=True,
@@ -804,7 +811,7 @@ def render_answer(message):
 if not st.session_state.messages and not st.session_state.is_thinking:
     st.markdown("""
         <div class="welcome-wrap">
-            <div class="welcome-glyph">âœ¦ Aster Policy Assistant</div>
+            <div class="welcome-glyph">✦ Aster Policy Assistant</div>
             <h1 class="welcome-title">
                 Ask anything about<br>
                 <em>Aster's policies</em>
@@ -839,7 +846,7 @@ else:
     if st.session_state.is_thinking:
         st.markdown("""
             <div class="msg-row bot">
-                <div class="avatar avatar-bot">âœ¦</div>
+                <div class="avatar avatar-bot">✦</div>
                 <div class="bubble-bot">
                     <div class="typing-indicator">
                         <div class="typing-dot"></div>
@@ -860,14 +867,14 @@ if "pending_hint" in st.session_state:
     st.session_state.is_thinking = True
     st.rerun()
 
-user_input = st.chat_input("Ask about an Aster policyâ€¦")
+user_input = st.chat_input("Ask about an Aster policy…")
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     st.session_state.is_thinking = True
     st.rerun()
 
 
-# â”€â”€â”€ Fetch the answer â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ─── Fetch the answer ───────────────────────────────────────
 if st.session_state.is_thinking and st.session_state.messages:
     question = next(
         (m["content"] for m in reversed(st.session_state.messages) if m["role"] == "user"), None
@@ -895,11 +902,12 @@ if st.session_state.is_thinking and st.session_state.messages:
                 "content": result["answer"],
                 "citations": result.get("citations", []),
                 "expired_warning": result.get("expired_warning"),
+                "needs_clarification": result.get("needs_clarification", False),
             }
         except Exception as e:
             message = {
                 "role": "assistant",
-                "content": f"âš ï¸ Could not reach the API: {type(e).__name__}: {e}",
+                "content": f"⚠️ Could not reach the API: {type(e).__name__}: {e}",
                 "citations": [],
                 "expired_warning": None,
             }
