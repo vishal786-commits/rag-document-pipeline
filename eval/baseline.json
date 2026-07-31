@@ -1,0 +1,3563 @@
+{
+  "started_at": "2026-07-30T18:59:04.220083+00:00",
+  "tag": "ci",
+  "mode": "retrieval",
+  "retriever": "bm25-offline",
+  "chat_model": "gpt-4.1-mini",
+  "embed_model": "text-embedding-3-small",
+  "question_count": 47,
+  "golden_generated_at": "2026-07-30T17:06:20.617634+00:00",
+  "aggregates": {
+    "overall": {
+      "mrr": 0.6113475177304964,
+      "ndcg@10": 0.6589128167920667,
+      "ndcg@3": 0.582557906098291,
+      "ndcg@5": 0.6250715723895798,
+      "precision@10": 0.10425531914893618,
+      "precision@3": 0.2624113475177305,
+      "precision@5": 0.1829787234042553,
+      "recall@10": 0.7553191489361702,
+      "recall@3": 0.6276595744680851,
+      "recall@5": 0.723404255319149
+    },
+    "ceilings": {
+      "precision@3": 0.4184397163120567,
+      "precision@5": 0.25106382978723407,
+      "precision@10": 0.12553191489361704
+    },
+    "by_type": {
+      "factual": {
+        "count": 22,
+        "mrr": 0.8522727272727273,
+        "ndcg@10": 0.9189206854319153,
+        "ndcg@3": 0.899344478246761,
+        "ndcg@5": 0.9189206854319153,
+        "precision@10": 0.10454545454545455,
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2090909090909091,
+        "recall@10": 1.0,
+        "recall@3": 0.9545454545454546,
+        "recall@5": 1.0
+      },
+      "multi_hop": {
+        "count": 12,
+        "mrr": 0.5694444444444444,
+        "ndcg@10": 0.4963832077832855,
+        "ndcg@3": 0.41364277596828924,
+        "ndcg@5": 0.4438997413911814,
+        "precision@10": 0.1416666666666667,
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.23333333333333336,
+        "recall@10": 0.625,
+        "recall@3": 0.4583333333333333,
+        "recall@5": 0.5
+      },
+      "summarization": {
+        "count": 6,
+        "mrr": 0.525,
+        "ndcg@10": 0.7993414693875954,
+        "ndcg@3": 0.43848829226190955,
+        "ndcg@5": 0.6392186543523223,
+        "precision@10": 0.15,
+        "precision@3": 0.16666666666666666,
+        "precision@5": 0.20000000000000004,
+        "recall@10": 1.0,
+        "recall@3": 0.5,
+        "recall@5": 1.0
+      },
+      "table": {
+        "count": 7,
+        "mrr": 0.0,
+        "ndcg@10": 0.0,
+        "ndcg@3": 0.0,
+        "ndcg@5": 0.0,
+        "precision@10": 0.0,
+        "precision@3": 0.0,
+        "precision@5": 0.0,
+        "recall@10": 0.0,
+        "recall@3": 0.0,
+        "recall@5": 0.0
+      }
+    }
+  },
+  "records": [
+    {
+      "id": "q001",
+      "type": "factual",
+      "question": "How does the housing trust ensure that tenants receive support tailored to their needs when allocating homes?",
+      "retrieved": [
+        {
+          "id": "lettings-policy#3",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#6",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#36",
+          "page": 9,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#0",
+          "page": 1,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#64",
+          "page": 22,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#6",
+          "page": 2,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#65",
+          "page": 22,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#14",
+          "page": 7,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#66",
+          "page": 22,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "lettings-policy#1",
+          "page": 1,
+          "source": "Lettings Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q002",
+      "type": "factual",
+      "question": "Which policies are related to the Diversity & Inclusion Policy?",
+      "retrieved": [
+        {
+          "id": "right-to-buy-right-to-acquire-policy#12",
+          "page": 4,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#9",
+          "page": 3,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#3",
+          "page": 2,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#4",
+          "page": 2,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#15",
+          "page": 5,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#9",
+          "page": 3,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "aids-adaptations-policy#11",
+          "page": 4,
+          "source": "Aids & Adaptations Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#5",
+          "page": 2,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#13",
+          "page": 4,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#16",
+          "page": 5,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.4306765580733931,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.4306765580733931,
+        "mrr": 0.25
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q003",
+      "type": "factual",
+      "question": "Which properties does the Repairs and Maintenance Policy apply to?",
+      "retrieved": [
+        {
+          "id": "repairs-and-maintenance-policy#0",
+          "page": 1,
+          "source": "Repairs and Maintenance Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#2",
+          "page": 1,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#12",
+          "page": 4,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#15",
+          "page": 5,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "repairs-and-maintenance-policy#1",
+          "page": 1,
+          "source": "Repairs and Maintenance Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#0",
+          "page": 1,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#10",
+          "page": 3,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "repairs-and-maintenance-policy#9",
+          "page": 3,
+          "source": "Repairs and Maintenance Policy.pdf"
+        },
+        {
+          "id": "repairs-and-maintenance-policy#4",
+          "page": 2,
+          "source": "Repairs and Maintenance Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q004",
+      "type": "factual",
+      "question": "Who is responsible for ensuring that colleagues and contractors are aware of asbestos risks and have access to the Asbestos Register?",
+      "retrieved": [
+        {
+          "id": "asbestos-management-policy#7",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#2",
+          "page": 1,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#1",
+          "page": 1,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#33",
+          "page": 8,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#6",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "gas-oil-solid-fuel-policy#6",
+          "page": 3,
+          "source": "Gas, Oil & Solid Fuel Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#4",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#39",
+          "page": 13,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#5",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q005",
+      "type": "factual",
+      "question": "How often will the compensation policy be reviewed?",
+      "retrieved": [
+        {
+          "id": "complaints-policy#13",
+          "page": 4,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#10",
+          "page": 3,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#7",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#8",
+          "page": 3,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#6",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#4",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#1",
+          "page": 1,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "domestic-abuse-policy#0",
+          "page": 1,
+          "source": "Domestic Abuse Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#5",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#10",
+          "page": 3,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.6309297535714574,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q006",
+      "type": "factual",
+      "question": "Can the council restrict future sales of a property to local people after a Right to Buy sale?",
+      "retrieved": [
+        {
+          "id": "right-to-buy-right-to-acquire-policy#8",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#10",
+          "page": 4,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#3",
+          "page": 2,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#0",
+          "page": 1,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#7",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#11",
+          "page": 4,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#38",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#89",
+          "page": 28,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#4",
+          "page": 2,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#18",
+          "page": 5,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q007",
+      "type": "factual",
+      "question": "What responsibilities does the Aster Group Ltd Board have regarding Health & Safety management?",
+      "retrieved": [
+        {
+          "id": "group-health-safety-policy#4",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#3",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#18",
+          "page": 6,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#32",
+          "page": 8,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#14",
+          "page": 5,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#6",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#0",
+          "page": 1,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#1",
+          "page": 1,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#51",
+          "page": 17,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#5",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q008",
+      "type": "factual",
+      "question": "Who is responsible for informing the Housing Team Member if re-housing is required and the expected duration?",
+      "retrieved": [
+        {
+          "id": "temporary-re-housing-decant-policy#3",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#6",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#7",
+          "page": 3,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#4",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#4",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#7",
+          "page": 3,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#6",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "gas-oil-solid-fuel-policy#6",
+          "page": 3,
+          "source": "Gas, Oil & Solid Fuel Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "empty-homes-policy#4",
+          "page": 2,
+          "source": "Empty Homes Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q009",
+      "type": "factual",
+      "question": "Who does the Electrical Installations Safety Policy apply to within Aster premises?",
+      "retrieved": [
+        {
+          "id": "electrical-installations-safety-policy#0",
+          "page": 1,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#2",
+          "page": 1,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#1",
+          "page": 1,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#8",
+          "page": 3,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#3",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#5",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#4",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#7",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#9",
+          "page": 3,
+          "source": "Electrical Installations Safety Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q010",
+      "type": "factual",
+      "question": "Who is responsible for scrutinising the embedding of the Infestation and Pests Policy after 12 months?",
+      "retrieved": [
+        {
+          "id": "infestation-and-pests-policy#9",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#0",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#3",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#2",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "pets-policy#13",
+          "page": 5,
+          "source": "Pets Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#7",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#17",
+          "page": 5,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#5",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#10",
+          "page": 3,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q011",
+      "type": "factual",
+      "question": "What is the threshold cost above which major adaptations are referred to the Local Authority for Disabled Facility Grant consideration?",
+      "retrieved": [
+        {
+          "id": "aids-adaptations-policy#3",
+          "page": 2,
+          "source": "Aids & Adaptations Policy.pdf"
+        },
+        {
+          "id": "aids-adaptations-policy#6",
+          "page": 3,
+          "source": "Aids & Adaptations Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#64",
+          "page": 22,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#13",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#0",
+          "page": 1,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#83",
+          "page": 26,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "aids-adaptations-policy#2",
+          "page": 1,
+          "source": "Aids & Adaptations Policy.pdf"
+        },
+        {
+          "id": "aids-adaptations-policy#5",
+          "page": 2,
+          "source": "Aids & Adaptations Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#107",
+          "page": 33,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "aids-adaptations-policy#10",
+          "page": 4,
+          "source": "Aids & Adaptations Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q012",
+      "type": "factual",
+      "question": "How does the Aster Group ensure that its customer groups are representative of all its customers?",
+      "retrieved": [
+        {
+          "id": "customer-voice-policy#6",
+          "page": 2,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#1",
+          "page": 1,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#17",
+          "page": 5,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#11",
+          "page": 4,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#4",
+          "page": 2,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#2",
+          "page": 1,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#71",
+          "page": 24,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#0",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#94",
+          "page": 29,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "vulnerability-policy#7",
+          "page": 3,
+          "source": "Vulnerability Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q013",
+      "type": "factual",
+      "question": "What types of tenancies does the housing provider offer to new or existing customers?",
+      "retrieved": [
+        {
+          "id": "tenancy-policy#2",
+          "page": 1,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#1",
+          "page": 1,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#5",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#1",
+          "page": 1,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#0",
+          "page": 1,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#37",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#0",
+          "page": 1,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#2",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#3",
+          "page": 2,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#3",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q014",
+      "type": "factual",
+      "question": "Which related policy addresses issues with abandoned vehicles?",
+      "retrieved": [
+        {
+          "id": "neighbourhood-management-policy#4",
+          "page": 2,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#17",
+          "page": 6,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#10",
+          "page": 4,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#13",
+          "page": 4,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#8",
+          "page": 3,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#2",
+          "page": 1,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#3",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#42",
+          "page": 14,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#12",
+          "page": 4,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#9",
+          "page": 4,
+          "source": "Vulnerability Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.6309297535714574,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q015",
+      "type": "factual",
+      "question": "Does the Environmental Sustainability Policy apply to housing and property management activities?",
+      "retrieved": [
+        {
+          "id": "environmental-sustainability-policy#0",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#1",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#2",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#3",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#37",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#4",
+          "page": 2,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "repairs-and-maintenance-policy#9",
+          "page": 3,
+          "source": "Repairs and Maintenance Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#10",
+          "page": 6,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#8",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q016",
+      "type": "factual",
+      "question": "Who is responsible for the day-to-day management of lifts according to the policy?",
+      "retrieved": [
+        {
+          "id": "lifts-lifting-equipment-policy#4",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#6",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#3",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#7",
+          "page": 3,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#5",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#5",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#3",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#1",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#6",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q017",
+      "type": "factual",
+      "question": "How soon after a property visit will I receive the survey report regarding damp, mould, or condensation issues?",
+      "retrieved": [
+        {
+          "id": "damp-mould-condensation-policy#10",
+          "page": 2,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#12",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#13",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#6",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#1",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "domestic-abuse-policy#4",
+          "page": 2,
+          "source": "Domestic Abuse Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#11",
+          "page": 2,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#16",
+          "page": 4,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#17",
+          "page": 4,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#11",
+          "page": 4,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q018",
+      "type": "factual",
+      "question": "What is a Variable Service Charge and how does it differ from a Fixed Service Charge?",
+      "retrieved": [
+        {
+          "id": "service-charge-policy#5",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#2",
+          "page": 1,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#7",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#6",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#1",
+          "page": 1,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#6",
+          "page": 2,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#6",
+          "page": 2,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#10",
+          "page": 3,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#8",
+          "page": 3,
+          "source": "Service Charge Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.6309297535714574,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q019",
+      "type": "factual",
+      "question": "How does Aster support leaseholders in engaging with leasehold policies and procedures?",
+      "retrieved": [
+        {
+          "id": "leasehold-freehold-policy#16",
+          "page": 5,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#8",
+          "page": 3,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#7",
+          "page": 2,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#0",
+          "page": 1,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#12",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#1",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#3",
+          "page": 1,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#6",
+          "page": 2,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#0",
+          "page": 1,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#4",
+          "page": 2,
+          "source": "Leasehold & Freehold Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.6309297535714574,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q020",
+      "type": "factual",
+      "question": "What factors should landlords consider to ensure homes remain accessible for people with disabilities when carrying out decent home improvements?",
+      "retrieved": [
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#36",
+          "page": 13,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#62",
+          "page": 21,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#51",
+          "page": 18,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#64",
+          "page": 22,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#61",
+          "page": 21,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#37",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#69",
+          "page": 23,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#98",
+          "page": 30,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#35",
+          "page": 13,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#97",
+          "page": 30,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.6309297535714574,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q021",
+      "type": "factual",
+      "question": "What are tenants reminded of regarding their behaviour towards employees or contractors?",
+      "retrieved": [
+        {
+          "id": "unreasonable-behaviour-policy#8",
+          "page": 3,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#4",
+          "page": 2,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#0",
+          "page": 1,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "domestic-abuse-policy#3",
+          "page": 2,
+          "source": "Domestic Abuse Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#2",
+          "page": 1,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#1",
+          "page": 1,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#33",
+          "page": 8,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#79",
+          "page": 25,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#6",
+          "page": 2,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "domestic-abuse-policy#1",
+          "page": 1,
+          "source": "Domestic Abuse Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q022",
+      "type": "factual",
+      "question": "Who does the Neighbourhood Management Policy apply to in Aster Group communities?",
+      "retrieved": [
+        {
+          "id": "neighbourhood-management-policy#0",
+          "page": 1,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#1",
+          "page": 1,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#10",
+          "page": 3,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#15",
+          "page": 5,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#10",
+          "page": 4,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#13",
+          "page": 4,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#9",
+          "page": 3,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#8",
+          "page": 3,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#8",
+          "page": 3,
+          "source": "Vulnerability Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "ndcg@3": 1.6309297535714575,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 1.6309297535714575,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "ndcg@10": 1.6309297535714575,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q023",
+      "type": "multi_hop",
+      "question": "Who is responsible for managing asbestos risks while also ensuring environmental sustainability practices such as preventing pollution and controlling nuisances are upheld in housing management?",
+      "retrieved": [
+        {
+          "id": "environmental-sustainability-policy#2",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#1",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#6",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#0",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#7",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "lifts-lifting-equipment-policy#4",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#4",
+          "page": 2,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#1",
+          "page": 1,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#33",
+          "page": 8,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 1.0,
+        "ndcg@3": 1.1173196815056892,
+        "recall@5": 1.0,
+        "precision@5": 0.8,
+        "ndcg@5": 1.2988614740430418,
+        "recall@10": 1.0,
+        "precision@10": 0.4,
+        "ndcg@10": 1.2988614740430418,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q024",
+      "type": "multi_hop",
+      "question": "How does the Unreasonable Behaviour Policy ensure fair treatment of customers who may also be considered adults at risk under the Safeguarding Adults at Risk Policy, and what roles are involved in managing these situations?",
+      "retrieved": [
+        {
+          "id": "safeguarding-adults-at-risk-policy#0",
+          "page": 1,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#7",
+          "page": 3,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#2",
+          "page": 2,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#10",
+          "page": 4,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#11",
+          "page": 4,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#8",
+          "page": 3,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#6",
+          "page": 3,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#14",
+          "page": 5,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "unreasonable-behaviour-policy#5",
+          "page": 2,
+          "source": "Unreasonable Behaviour Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#0",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "ndcg@10": 0.3790609142559458,
+        "mrr": 0.16666666666666666
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q025",
+      "type": "multi_hop",
+      "question": "How does the Electrical Installations Safety Policy apply to agricultural workers' dwellings provided as part of their employment, considering the Fitness for Human Habitation Act 2018?",
+      "retrieved": [
+        {
+          "id": "fitness-for-human-habitation-act-2018#4",
+          "page": 5,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#16",
+          "page": 9,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#13",
+          "page": 8,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#15",
+          "page": 9,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#8",
+          "page": 7,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#7",
+          "page": 6,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#3",
+          "page": 5,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#5",
+          "page": 6,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#9",
+          "page": 7,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        },
+        {
+          "id": "fitness-for-human-habitation-act-2018#14",
+          "page": 8,
+          "source": "Fitness for Human Habitation Act 2018.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.23463936301137822,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.23463936301137822,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.23463936301137822,
+        "mrr": 0.3333333333333333
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q026",
+      "type": "multi_hop",
+      "question": "How does the policy differentiate between leaseholders sub-letting their property and residents in supported housing with licences regarding their rights and responsibilities?",
+      "retrieved": [
+        {
+          "id": "lettings-policy#0",
+          "page": 1,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#6",
+          "page": 2,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#5",
+          "page": 2,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "domestic-abuse-policy#3",
+          "page": 2,
+          "source": "Domestic Abuse Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#0",
+          "page": 1,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#5",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "data-protection-privacy-confidentiality-policy#33",
+          "page": 8,
+          "source": "Data Protection, Privacy & Confidentiality Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#1",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#12",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#3",
+          "page": 1,
+          "source": "Leasehold & Freehold Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.23463936301137822,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.23463936301137822,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.23463936301137822,
+        "mrr": 0.3333333333333333
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q027",
+      "type": "multi_hop",
+      "question": "How does the Designated Trustee for Safeguarding collaborate with housing staff to manage risks related to infestations and pests that could affect vulnerable children in communal areas?",
+      "retrieved": [
+        {
+          "id": "safeguarding-children-at-risk-policy#10",
+          "page": 4,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#8",
+          "page": 3,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#3",
+          "page": 2,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#9",
+          "page": 3,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#4",
+          "page": 2,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#0",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#6",
+          "page": 3,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#7",
+          "page": 3,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#8",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#7",
+          "page": 3,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.7039180890341347,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.7039180890341347,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.7039180890341347,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q028",
+      "type": "multi_hop",
+      "question": "How does the Damp, Mould & Condensation Policy inform the decision to temporarily re-house tenants under the Temporary Re-Housing (Decant) Policy when major repairs are needed?",
+      "retrieved": [
+        {
+          "id": "temporary-re-housing-decant-policy#3",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#14",
+          "page": 4,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#6",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#11",
+          "page": 4,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#8",
+          "page": 3,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#16",
+          "page": 5,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#17",
+          "page": 4,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#4",
+          "page": 2,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "empty-homes-policy#7",
+          "page": 3,
+          "source": "Empty Homes Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#3",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q029",
+      "type": "multi_hop",
+      "question": "How does the policy ensure that lift inspectors are both technically competent and operate within an inclusive and fair workplace culture?",
+      "retrieved": [
+        {
+          "id": "lifts-lifting-equipment-policy#3",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "lifts-lifting-equipment-policy#1",
+          "page": 1,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#1",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#7",
+          "page": 3,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "lifts-lifting-equipment-policy#8",
+          "page": 3,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#0",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "repairs-and-maintenance-policy#7",
+          "page": 3,
+          "source": "Repairs and Maintenance Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#5",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "lettings-policy#3",
+          "page": 2,
+          "source": "Lettings Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#3",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.6666666666666666,
+        "ndcg@3": 0.9385574520455129,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 0.9385574520455129,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "ndcg@10": 0.9385574520455129,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q030",
+      "type": "multi_hop",
+      "question": "How do ASB Officers and Housing Managers handle legal actions related to anti-social behaviour, and under what circumstances might tenants receive financial compensation for service failures related to such cases?",
+      "retrieved": [
+        {
+          "id": "compensation-policy#7",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#5",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#14",
+          "page": 5,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#7",
+          "page": 3,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#12",
+          "page": 4,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#18",
+          "page": 6,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#6",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#0",
+          "page": 1,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#1",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.2507406824493034,
+        "mrr": 0.16666666666666666
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q031",
+      "type": "multi_hop",
+      "question": "Who is responsible for ensuring the lettable standard of properties and who manages the day-to-day responsibility for lifts in housing properties?",
+      "retrieved": [
+        {
+          "id": "lifts-lifting-equipment-policy#4",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#6",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#3",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#5",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "empty-homes-policy#3",
+          "page": 2,
+          "source": "Empty Homes Policy.pdf"
+        },
+        {
+          "id": "gas-oil-solid-fuel-policy#6",
+          "page": 3,
+          "source": "Gas, Oil & Solid Fuel Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#7",
+          "page": 3,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#7",
+          "page": 3,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#1",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.46927872602275644,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.46927872602275644,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.46927872602275644,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q032",
+      "type": "multi_hop",
+      "question": "Who is responsible for ensuring compliance with the Smoke & Carbon Monoxide Alarm Policy and the Section 20 Policy in housing management?",
+      "retrieved": [
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#4",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#1",
+          "page": 1,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#6",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#5",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#7",
+          "page": 3,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#9",
+          "page": 3,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#8",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#7",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#0",
+          "page": 1,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "lifts-lifting-equipment-policy#4",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.44412286644879784,
+        "recall@5": 1.0,
+        "precision@5": 0.4,
+        "ndcg@5": 0.6256646589861505,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "ndcg@10": 0.6256646589861505,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q033",
+      "type": "multi_hop",
+      "question": "How does the Compensation Policy address claims related to asbestos damage reported by customers, and what roles do Housing and Independent Living colleagues play in supporting access for asbestos management?",
+      "retrieved": [
+        {
+          "id": "asbestos-management-policy#7",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#4",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        },
+        {
+          "id": "lifts-lifting-equipment-policy#5",
+          "page": 2,
+          "source": "Lifts & Lifting Equipment Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#4",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#1",
+          "page": 1,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "gas-oil-solid-fuel-policy#6",
+          "page": 3,
+          "source": "Gas, Oil & Solid Fuel Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#6",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#14",
+          "page": 4,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#1",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#4",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.46927872602275644,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.46927872602275644,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.46927872602275644,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q034",
+      "type": "multi_hop",
+      "question": "How should Aster Group staff balance safeguarding responsibilities with confidentiality when dealing with tenants affected by pest infestations that may require temporary rehousing?",
+      "retrieved": [
+        {
+          "id": "infestation-and-pests-policy#0",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#4",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#12",
+          "page": 4,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "safeguarding-adults-at-risk-policy#11",
+          "page": 4,
+          "source": "Safeguarding Adults at Risk Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#11",
+          "page": 4,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "pets-policy#2",
+          "page": 1,
+          "source": "Pets Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#7",
+          "page": 3,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#2",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#5",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#8",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.5,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.35195904451706733,
+        "recall@5": 0.5,
+        "precision@5": 0.2,
+        "ndcg@5": 0.35195904451706733,
+        "recall@10": 0.5,
+        "precision@10": 0.1,
+        "ndcg@10": 0.35195904451706733,
+        "mrr": 0.3333333333333333
+      },
+      "ceilings": {
+        "precision@3": 0.6666666666666666,
+        "precision@5": 0.4,
+        "precision@10": 0.2
+      }
+    },
+    {
+      "id": "q035",
+      "type": "table",
+      "question": "Who is the policy owner of the Tenancy Policy effective from April 23, 2025?",
+      "retrieved": [
+        {
+          "id": "pets-policy#10",
+          "page": 4,
+          "source": "Pets Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#6",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#9",
+          "page": 3,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#14",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#0",
+          "page": 1,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#3",
+          "page": 2,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#14",
+          "page": 5,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#0",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q036",
+      "type": "table",
+      "question": "Who is the policy owner of the Recharges Policy effective from 01/04/2024?",
+      "retrieved": [
+        {
+          "id": "recharges-policy#3",
+          "page": 2,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#14",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#7",
+          "page": 3,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#6",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#0",
+          "page": 1,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#14",
+          "page": 5,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#0",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#4",
+          "page": 2,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "pets-policy#10",
+          "page": 4,
+          "source": "Pets Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q037",
+      "type": "table",
+      "question": "Who is the owner of the Diversity & Inclusion Policy effective from 01/11/2024?",
+      "retrieved": [
+        {
+          "id": "diversity-inclusion-policy#3",
+          "page": 2,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#1",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "diversity-inclusion-policy#0",
+          "page": 1,
+          "source": "Diversity & Inclusion Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#14",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#8",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#15",
+          "page": 5,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#3",
+          "page": 2,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#6",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#81",
+          "page": 26,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q038",
+      "type": "table",
+      "question": "What is the expected lifetime of the wall structure component in houses and bungalows according to the Decent Home guidance?",
+      "retrieved": [
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#47",
+          "page": 17,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#44",
+          "page": 16,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#114",
+          "page": 35,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#37",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#62",
+          "page": 21,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "right-to-buy-right-to-acquire-policy#3",
+          "page": 2,
+          "source": "Right to Buy _ Right to Acquire Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#98",
+          "page": 30,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#55",
+          "page": 19,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#109",
+          "page": 34,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#29",
+          "page": 12,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q039",
+      "type": "table",
+      "question": "Who is the Policy Owner of the Fire Safety Policy effective from 01/09/2022?",
+      "retrieved": [
+        {
+          "id": "fire-safety-policy#5",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#6",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#1",
+          "page": 1,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#2",
+          "page": 1,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "service-charge-policy#6",
+          "page": 2,
+          "source": "Service Charge Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#14",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#23",
+          "page": 8,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "group-health-safety-policy#4",
+          "page": 2,
+          "source": "Group Health & Safety Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#0",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q040",
+      "type": "table",
+      "question": "When does the Vulnerability Policy become effective and when does it expire?",
+      "retrieved": [
+        {
+          "id": "vulnerability-policy#2",
+          "page": 1,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#4",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#2",
+          "page": 2,
+          "source": "Recharges Policy.pdf"
+        },
+        {
+          "id": "gas-oil-solid-fuel-policy#4",
+          "page": 2,
+          "source": "Gas, Oil & Solid Fuel Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#1",
+          "page": 1,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#92",
+          "page": 29,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "pets-policy#0",
+          "page": 1,
+          "source": "Pets Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#5",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q041",
+      "type": "table",
+      "question": "Who is the policy owner of the Customer Voice Policy effective from 11/01/2024?",
+      "retrieved": [
+        {
+          "id": "customer-voice-policy#1",
+          "page": 1,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "neighbourhood-management-policy#8",
+          "page": 3,
+          "source": "Neighbourhood Management Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#0",
+          "page": 1,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#2",
+          "page": 1,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "leasehold-freehold-policy#14",
+          "page": 4,
+          "source": "Leasehold & Freehold Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#8",
+          "page": 3,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "safeguarding-children-at-risk-policy#1",
+          "page": 1,
+          "source": "Safeguarding Children at Risk Policy.pdf"
+        },
+        {
+          "id": "customer-voice-policy#4",
+          "page": 2,
+          "source": "Customer Voice Policy.pdf"
+        },
+        {
+          "id": "anti-social-behaviour-policy#14",
+          "page": 5,
+          "source": "Anti-Social Behaviour Policy.pdf"
+        },
+        {
+          "id": "recharges-policy#3",
+          "page": 2,
+          "source": "Recharges Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0,
+        "recall@10": 0.0,
+        "precision@10": 0.0,
+        "ndcg@10": 0.0,
+        "mrr": 0.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q042",
+      "type": "summarization",
+      "question": "What does the Damp, Mould & Condensation Policy cover in terms of managing and preventing these issues in homes?",
+      "retrieved": [
+        {
+          "id": "damp-mould-condensation-policy#10",
+          "page": 2,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#6",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#13",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#12",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#4",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#7",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#15",
+          "page": 3,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#1",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#3",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        },
+        {
+          "id": "damp-mould-condensation-policy#5",
+          "page": 1,
+          "source": "Damp, Mould & Condensation Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.4306765580733931,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.4306765580733931,
+        "mrr": 0.25
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q043",
+      "type": "summarization",
+      "question": "What are the overall responsibilities and expectations outlined in the Smoke & Carbon Monoxide Alarm Policy?",
+      "retrieved": [
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#1",
+          "page": 1,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#5",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#6",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#8",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#0",
+          "page": 1,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#4",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#9",
+          "page": 3,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#2",
+          "page": 1,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#10",
+          "page": 3,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        },
+        {
+          "id": "smoke-carbon-monoxide-alarm-policy#7",
+          "page": 2,
+          "source": "Smoke & Carbon Monoxide Alarm Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 0.6309297535714574,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714574,
+        "recall@10": 1.0,
+        "precision@10": 0.2,
+        "ndcg@10": 0.9871369406794797,
+        "mrr": 0.5
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q044",
+      "type": "summarization",
+      "question": "What are the overall responsibilities and accountability outlined in the Asbestos Management Policy?",
+      "retrieved": [
+        {
+          "id": "asbestos-management-policy#6",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#7",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "section-20-policy#9",
+          "page": 3,
+          "source": "Section 20 Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#11",
+          "page": 4,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "vulnerability-policy#7",
+          "page": 3,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#2",
+          "page": 1,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#1",
+          "page": 1,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "fire-safety-policy#5",
+          "page": 2,
+          "source": "Fire Safety Policy.pdf"
+        },
+        {
+          "id": "asbestos-management-policy#5",
+          "page": 2,
+          "source": "Asbestos Management Policy.pdf"
+        },
+        {
+          "id": "electrical-installations-safety-policy#3",
+          "page": 2,
+          "source": "Electrical Installations Safety Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.3,
+        "ndcg@10": 1.6045297031036165,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q045",
+      "type": "summarization",
+      "question": "What does the Environmental Sustainability Policy require in terms of monitoring and review?",
+      "retrieved": [
+        {
+          "id": "environmental-sustainability-policy#0",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#1",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#2",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#4",
+          "page": 2,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "environmental-sustainability-policy#3",
+          "page": 1,
+          "source": "Environmental Sustainability Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#92",
+          "page": 29,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#37",
+          "page": 14,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        },
+        {
+          "id": "vulnerability-policy#5",
+          "page": 2,
+          "source": "Vulnerability Policy.pdf"
+        },
+        {
+          "id": "tenancy-policy#1",
+          "page": 1,
+          "source": "Tenancy Policy.pdf"
+        },
+        {
+          "id": "a-decent-home-definition-and-guidance-for-implementation#105",
+          "page": 32,
+          "source": "A Decent Home-Definition and guidance for implementation.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.38685280723454163,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.38685280723454163,
+        "mrr": 0.2
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q046",
+      "type": "summarization",
+      "question": "What does the Infestation and Pests Policy cover regarding responsibilities and procedures for treating infestations and pests?",
+      "retrieved": [
+        {
+          "id": "infestation-and-pests-policy#3",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#5",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#0",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#1",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#2",
+          "page": 1,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#4",
+          "page": 2,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#8",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "pets-policy#14",
+          "page": 5,
+          "source": "Pets Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#10",
+          "page": 3,
+          "source": "Infestation and Pests Policy.pdf"
+        },
+        {
+          "id": "infestation-and-pests-policy#11",
+          "page": 4,
+          "source": "Infestation and Pests Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 0.0,
+        "precision@3": 0.0,
+        "ndcg@3": 0.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.38685280723454163,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 0.38685280723454163,
+        "mrr": 0.2
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    },
+    {
+      "id": "q047",
+      "type": "summarization",
+      "question": "What does the Compensation Policy cover regarding payments for customers who must move due to Aster's activities?",
+      "retrieved": [
+        {
+          "id": "compensation-policy#3",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#2",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#10",
+          "page": 3,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#0",
+          "page": 1,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "complaints-policy#0",
+          "page": 1,
+          "source": "Complaints Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#9",
+          "page": 3,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#10",
+          "page": 3,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#6",
+          "page": 2,
+          "source": "Compensation Policy.pdf"
+        },
+        {
+          "id": "temporary-re-housing-decant-policy#0",
+          "page": 1,
+          "source": "Temporary Re-Housing (Decant) Policy.pdf"
+        },
+        {
+          "id": "compensation-policy#8",
+          "page": 3,
+          "source": "Compensation Policy.pdf"
+        }
+      ],
+      "metrics": {
+        "recall@3": 1.0,
+        "precision@3": 0.3333333333333333,
+        "ndcg@3": 1.0,
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0,
+        "recall@10": 1.0,
+        "precision@10": 0.1,
+        "ndcg@10": 1.0,
+        "mrr": 1.0
+      },
+      "ceilings": {
+        "precision@3": 0.3333333333333333,
+        "precision@5": 0.2,
+        "precision@10": 0.1
+      }
+    }
+  ]
+}

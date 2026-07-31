@@ -9,8 +9,15 @@ __pycache__
 .env
 .env.*
 !.env.example
-uploaded_pdfs
 *.md
 assets
 .cursor
-README.md
+.pytest_cache
+
+# Never needed at runtime: the PDFs are read only by the ingest job, and the
+# eval and tests are development tooling.
+knowledge_base
+eval
+tests
+docs
+requirements-dev.txt

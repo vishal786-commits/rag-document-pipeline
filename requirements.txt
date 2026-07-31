@@ -1,11 +1,24 @@
-pypdf
-openai
-python-dotenv
-pinecone
-fastapi
-uvicorn
-streamlit
-python-multipart
-requests
-langchain-text-splitters[all]
-rank-bm25
+# Runtime dependencies. Pinned exactly: langchain-* ships breaking changes on
+# minor bumps, and an unpinned build that works today fails three weeks later.
+# Dev/eval tools live in requirements-dev.txt so they stay out of the image.
+
+# API and UI
+fastapi==0.135.1
+uvicorn[standard]==0.41.0
+streamlit==1.55.0
+requests==2.32.5
+python-dotenv==1.2.2
+
+# LangChain
+langchain-core==1.5.3
+langchain-openai==1.4.1
+langchain-text-splitters==1.1.1
+langchain-pinecone==0.2.13
+
+# Models and vector store
+openai==2.50.0
+pinecone==7.3.0          # langchain-pinecone 0.2.x requires pinecone<8
+
+# Document processing and retrieval
+pymupdf4llm==1.28.0      # layout-aware PDF -> Markdown (AGPL; see README)
+rank-bm25==0.2.2

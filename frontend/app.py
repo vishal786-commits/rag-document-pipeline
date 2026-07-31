@@ -107,42 +107,6 @@ html, body, .stApp {
     margin-top: 8px;
 }
 
-/* ─── Upload Zone ──────────────────────────────────── */
-.upload-zone {
-    background: rgba(16, 185, 129, 0.05);
-    border: 1.5px dashed rgba(52, 211, 152, 0.25);
-    border-radius: 16px;
-    padding: 28px 16px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.upload-zone:hover {
-    background: rgba(16, 185, 129, 0.09);
-    border-color: rgba(52, 211, 152, 0.45);
-}
-
-.upload-icon {
-    font-size: 32px;
-    margin-bottom: 8px;
-    display: block;
-}
-
-.upload-text {
-    font-size: 13px;
-    color: rgba(232, 245, 238, 0.65);
-    line-height: 1.5;
-}
-
-.upload-text strong {
-    color: #34d399;
-    display: block;
-    font-size: 14px;
-    margin-bottom: 4px;
-}
-
 /* ─── Status Cards ─────────────────────────────────── */
 .status-card {
     background: rgba(255,255,255,0.03);
@@ -165,8 +129,6 @@ html, body, .stApp {
 
 .status-dot.idle    { background: rgba(148, 163, 184, 0.4); }
 .status-dot.active  { background: #10b981; box-shadow: 0 0 8px #10b981; animation: pulse-dot 1.5s infinite; }
-.status-dot.loading { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; animation: pulse-dot 0.8s infinite; }
-.status-dot.done    { background: #10b981; }
 
 @keyframes pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
@@ -175,33 +137,6 @@ html, body, .stApp {
 
 .status-text { color: rgba(232, 245, 238, 0.8); }
 .status-text span { display: block; font-size: 11px; color: rgba(232, 245, 238, 0.4); margin-top: 2px; }
-
-/* Doc info pill */
-.doc-pill {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 12px;
-    font-family: 'DM Mono', monospace;
-    color: #34d399;
-    word-break: break-all;
-    margin-top: 16px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-/* Reset button */
-.reset-hint {
-    font-size: 11px;
-    color: rgba(239, 68, 68, 0.5);
-    text-align: center;
-    margin-top: 24px;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.reset-hint:hover { color: rgba(239, 68, 68, 0.85); }
 
 /* ─── Hide Streamlit chrome ────────────────────────── */
 #MainMenu, footer, header { visibility: hidden; }
@@ -267,24 +202,6 @@ html, body, .stApp {
 }
 
 /* Suggested questions */
-.suggested-questions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-width: 560px;
-    margin: 28px auto 0;
-    padding: 0 16px;
-}
-
-.sq-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(52, 211, 152, 0.4);
-    margin-bottom: 4px;
-    text-align: center;
-}
-
 /* Override for suggested question buttons in main area */
 .suggested-q-wrap .stButton button {
     background: rgba(255,255,255,0.03) !important;
@@ -374,14 +291,6 @@ html, body, .stApp {
 }
 
 /* Hint pills row */
-.hint-row {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Hint buttons — styled via Streamlit button override below */
 div[data-testid="stHorizontalBlock"] .stButton button,
 .hint-btn-wrap .stButton button {
@@ -551,34 +460,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     box-shadow: 0 0 16px rgba(16,185,129,0.4) !important;
 }
 
-/* ─── File uploader override ───────────────────────── */
-[data-testid="stFileUploader"] {
-    background: transparent !important;
-}
-
-[data-testid="stFileUploader"] section {
-    background: rgba(16,185,129,0.04) !important;
-    border: 1.5px dashed rgba(52,211,152,0.22) !important;
-    border-radius: 14px !important;
-    padding: 20px !important;
-}
-
-[data-testid="stFileUploader"] section:hover {
-    background: rgba(16,185,129,0.08) !important;
-    border-color: rgba(52,211,152,0.42) !important;
-}
-
-[data-testid="stFileUploader"] label {
-    color: rgba(232,245,238,0.7) !important;
-    font-size: 13px !important;
-}
-
-[data-testid="stFileUploaderDropzoneInstructions"] {
-    color: rgba(232,245,238,0.55) !important;
-    font-size: 12px !important;
-}
-
-/* Button overrides — sidebar remove doc button */
+/* Button overrides — sidebar clear-conversation button */
 [data-testid="stSidebar"] .stButton button {
     background: rgba(239,68,68,0.1) !important;
     color: rgba(252,165,165,0.8) !important;
@@ -613,59 +495,45 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
 ::-webkit-scrollbar-thumb { background: rgba(52,211,152,0.2); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(52,211,152,0.4); }
 
-/* ─── Main Upload Zone ─────────────────────────────── */
-.main-upload-zone {
-    margin-top: 4px;
-}
-
-.main-upload-zone [data-testid="stFileUploader"] section {
-    background: rgba(16,185,129,0.05) !important;
-    border: 1.5px dashed rgba(52,211,152,0.3) !important;
-    border-radius: 20px !important;
-    padding: 40px 32px !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-    cursor: pointer !important;
-}
-
-.main-upload-zone [data-testid="stFileUploader"] section:hover {
-    background: rgba(16,185,129,0.09) !important;
-    border-color: rgba(52,211,152,0.55) !important;
-    box-shadow: 0 0 40px rgba(16,185,129,0.08) !important;
-}
-
-.main-upload-zone [data-testid="stFileUploaderDropzoneInstructions"] div span {
-    font-size: 15px !important;
-    color: rgba(232,245,238,0.75) !important;
-    font-family: 'DM Sans', sans-serif !important;
-}
-
-.main-upload-zone [data-testid="stFileUploaderDropzoneInstructions"] div small {
-    color: rgba(52,211,152,0.6) !important;
-    font-size: 12px !important;
-}
-
 </style>
 """, unsafe_allow_html=True)
+
+
+# ─── API helpers ────────────────────────────────────────────
+@st.cache_data(ttl=60)
+def fetch_policies():
+    """The policy list, from the API. Cached so the sidebar is cheap."""
+    try:
+        response = requests.get(f"{API_URL}/policies", timeout=10)
+        response.raise_for_status()
+        return response.json()["policies"], None
+    except Exception as e:
+        return [], f"{type(e).__name__}: {e}"
+
+
+@st.cache_data(ttl=15)
+def fetch_health():
+    """Actually probe the API. The old status card was hardcoded to green."""
+    try:
+        response = requests.get(f"{API_URL}/health", timeout=5)
+        response.raise_for_status()
+        return response.json(), None
+    except Exception as e:
+        return None, f"{type(e).__name__}: {e}"
 
 
 # ─── Session State ──────────────────────────────────────────
 if "messages" not in st.session_state:
     st.session_state.messages = []
-if "session_id" not in st.session_state:
-    st.session_state.session_id = None
-if "doc_name" not in st.session_state:
-    st.session_state.doc_name = None
 if "is_thinking" not in st.session_state:
     st.session_state.is_thinking = False
-if "status" not in st.session_state:
-    st.session_state.status = "idle"  # idle | processing | ready | thinking
+
+policies, policies_error = fetch_policies()
+health, health_error = fetch_health()
 
 
 # ─── Sidebar ────────────────────────────────────────────────
 with st.sidebar:
-
-    # Brand
     st.markdown("""
         <div class="brand">
             <div class="brand-icon">✦</div>
@@ -673,100 +541,30 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
-    st.markdown('<div class="sidebar-label">Document</div>', unsafe_allow_html=True)
-
-    if st.session_state.session_id is None:
-        st.markdown('<div style="font-size:11px; color:rgba(232,245,238,0.35); margin-bottom:10px;">Or upload here if sidebar is open</div>', unsafe_allow_html=True)
-        # Upload widget (sidebar copy — main panel also has one)
-        uploaded_file = st.file_uploader(
-            "Drop your PDF here",
-            type=["pdf"],
-            label_visibility="collapsed",
-            key="sidebar_uploader"
-        )
-
-        if uploaded_file:
-            st.session_state.status = "processing"
-            with st.spinner("Embedding document…"):
-                try:
-                    response = requests.post(
-                        f"{API_URL}/upload",
-                        files={"file": uploaded_file}
-                    )
-                    result = response.json()
-                    st.session_state.session_id = result["session_id"]
-                    st.session_state.doc_name = uploaded_file.name
-                    st.session_state.status = "ready"
-                except Exception as e:
-                    st.error(f"Upload failed: {e}")
-                    st.session_state.status = "idle"
-            st.rerun()
-    else:
-        # Show uploaded doc info
+    # ── Connection (a real probe, not a hardcoded green dot) ──
+    st.markdown('<div class="sidebar-label">Status</div>', unsafe_allow_html=True)
+    if health:
+        ready = health.get("knowledge_base") == "ready"
         st.markdown(f"""
-            <div class="doc-pill">
-                <span>📄</span>
-                <span>{st.session_state.doc_name or "document.pdf"}</span>
+            <div class="status-card">
+                <div class="status-dot {'active' if ready else 'idle'}"></div>
+                <div class="status-text">
+                    {"Knowledge base ready" if ready else "Knowledge base unavailable"}
+                    <span>{API_URL}</span>
+                </div>
+            </div>
+        """, unsafe_allow_html=True)
+    else:
+        st.markdown(f"""
+            <div class="status-card">
+                <div class="status-dot idle"></div>
+                <div class="status-text">
+                    API unreachable
+                    <span>{health_error}</span>
+                </div>
             </div>
         """, unsafe_allow_html=True)
 
-        st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
-
-        if st.button("✕ Remove document"):
-            st.session_state.session_id = None
-            st.session_state.doc_name = None
-            st.session_state.messages = []
-            st.session_state.status = "idle"
-            st.rerun()
-
-    # ── Status Panel ──
-    st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
-    st.markdown('<div class="sidebar-label">Status</div>', unsafe_allow_html=True)
-
-    # Connection
-    st.markdown("""
-        <div class="status-card">
-            <div class="status-dot active"></div>
-            <div class="status-text">
-                API Connected
-                <span>localhost:8000</span>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Document status
-    if st.session_state.status == "idle":
-        doc_dot = "idle"
-        doc_label = "No document loaded"
-        doc_sub = "Upload a PDF to begin"
-    elif st.session_state.status == "processing":
-        doc_dot = "loading"
-        doc_label = "Processing…"
-        doc_sub = "Chunking & embedding"
-    elif st.session_state.status == "ready":
-        doc_dot = "done"
-        doc_label = "Document ready"
-        doc_sub = "Ask anything below"
-    elif st.session_state.status == "thinking":
-        doc_dot = "loading"
-        doc_label = "Thinking…"
-        doc_sub = "Retrieving context"
-    else:
-        doc_dot = "idle"
-        doc_label = "Standby"
-        doc_sub = ""
-
-    st.markdown(f"""
-        <div class="status-card">
-            <div class="status-dot {doc_dot}"></div>
-            <div class="status-text">
-                {doc_label}
-                <span>{doc_sub}</span>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
-    # Message count
     msg_count = len([m for m in st.session_state.messages if m["role"] == "user"])
     st.markdown(f"""
         <div class="status-card">
@@ -778,79 +576,112 @@ with st.sidebar:
         </div>
     """, unsafe_allow_html=True)
 
+    if st.session_state.messages and st.button("✕ Clear conversation"):
+        st.session_state.messages = []
+        st.rerun()
+
+    # ── Policies in the knowledge base ──
+    st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="sidebar-label">Knowledge base · {len(policies)} documents</div>',
+        unsafe_allow_html=True,
+    )
+
+    if policies_error:
+        st.error(f"Could not load the document list: {policies_error}")
+    else:
+        expired = [p for p in policies if p["status"] == "expired"]
+        if expired:
+            st.markdown(
+                f'<div style="font-size:11px; color:#f0b429; margin-bottom:8px;">'
+                f'⚠ {len(expired)} past their review date</div>',
+                unsafe_allow_html=True,
+            )
+        with st.expander("Browse documents"):
+            for p in policies:
+                badge = " ⚠" if p["status"] == "expired" else ""
+                st.markdown(
+                    f'<div style="font-size:11px; padding:3px 0; '
+                    f'color:rgba(232,245,238,0.7);">{p["title"]}{badge}</div>',
+                    unsafe_allow_html=True,
+                )
+
 
 # ─── Main Area ──────────────────────────────────────────────
 
 SUGGESTED_QUESTIONS = [
-    ("📋", "Give me a summary of the entire document"),
-    ("🔍", "What are the key findings or conclusions?"),
-    ("💡", "Explain the main concepts in simple terms"),
-    ("📊", "Are there any tables, numbers, or statistics mentioned?"),
-    ("📌", "What are the most important sections?"),
-    ("❓", "What questions does this document answer?"),
+    ("🏠", "How quickly must we respond to a report of damp and mould?"),
+    ("🔧", "What are a tenant's responsibilities for reporting repairs?"),
+    ("🔥", "What does the Fire Safety Policy require for risk assessments?"),
+    ("⚖️", "How does the complaints process work and what are the timescales?"),
+    ("🛡️", "What support is available under the Domestic Abuse Policy?"),
+    ("📋", "Which documents are past their review date?"),
 ]
 
-if not st.session_state.session_id:
-    # Welcome + upload screen
+
+def render_answer(message):
+    """An assistant turn: the answer, an expiry banner, and its citations."""
+    with st.chat_message("assistant"):
+        if message.get("needs_clarification"):
+            # The assistant asked rather than guessed; the user's reply arrives
+            # as the next question, so nothing is needed beyond a hint.
+            st.markdown(message["content"])
+            st.caption("Reply below and I'll search for that.")
+            return
+
+        st.markdown(message["content"])
+
+        if message.get("expired_warning"):
+            st.warning(message["expired_warning"], icon="⚠️")
+
+        citations = message.get("citations") or []
+        if citations:
+            inferred = citations[0].get("inferred")
+            label = (
+                f"Sources consulted ({len(citations)})"
+                if inferred
+                else f"Sources cited ({len(citations)})"
+            )
+            with st.expander(label):
+                if inferred:
+                    st.caption(
+                        "The answer did not cite specific extracts, so everything "
+                        "retrieved is listed."
+                    )
+                for c in citations:
+                    flag = " · expired" if c["status"] == "expired" else ""
+                    st.markdown(
+                        f"**[{c['n']}] {c['source_file']}** — page {c['page']}{flag}  \n"
+                        f'<span style="font-size:11px; color:rgba(232,245,238,0.5);">'
+                        f"{c['heading_path']}</span>",
+                        unsafe_allow_html=True,
+                    )
+
+
+if not st.session_state.messages and not st.session_state.is_thinking:
     st.markdown("""
         <div class="welcome-wrap">
-            <div class="welcome-glyph">✦DocMind</div>
+            <div class="welcome-glyph">✦ DocMind</div>
             <h1 class="welcome-title">
                 Ask anything about<br>
                 <em>your documents</em>
             </h1>
             <p class="welcome-sub">
-                Drop a PDF below to get started. Then ask questions in plain English —
-                DocMind retrieves the exact context and answers precisely.
+                Answers come only from the loaded library, with a citation to the
+                document and page they came from.
             </p>
         </div>
     """, unsafe_allow_html=True)
 
-    # ── Centered upload widget ──
-    _, upload_col, _ = st.columns([1, 1.6, 1])
-    with upload_col:
-        st.markdown('<div class="main-upload-zone">', unsafe_allow_html=True)
-        uploaded_file_main = st.file_uploader(
-            "Upload PDF",
-            type=["pdf"],
-            label_visibility="collapsed",
-            key="main_uploader"
-        )
+    _, sq_col, _ = st.columns([1, 3, 1])
+    with sq_col:
+        st.markdown('<div class="suggested-q-wrap">', unsafe_allow_html=True)
+        for icon, question in SUGGESTED_QUESTIONS:
+            if st.button(f"{icon}  {question}", key=f"sq_{question[:24]}"):
+                st.session_state["pending_hint"] = question
         st.markdown('</div>', unsafe_allow_html=True)
-
-        if uploaded_file_main:
-            st.session_state.status = "processing"
-            with st.spinner("Processing document…"):
-                try:
-                    response = requests.post(
-                        f"{API_URL}/upload",
-                        files={"file": uploaded_file_main}
-                    )
-                    result = response.json()
-                    st.session_state.session_id = result["session_id"]
-                    st.session_state.doc_name = uploaded_file_main.name
-                    st.session_state.status = "ready"
-                except Exception as e:
-                    st.error(f"Upload failed: {e}")
-                    st.session_state.status = "idle"
-            st.rerun()
-
-    # Hint pills
-    st.markdown("""
-        <div style="display:flex; justify-content:center; margin-top: 16px; margin-bottom: 4px;">
-            <div class="hint-row">
-                <div class="hint-pill">📋 Summarize key points</div>
-                <div class="hint-pill">🔍 Find specific data</div>
-                <div class="hint-pill">💡 Explain concepts</div>
-                <div class="hint-pill">📊 Extract tables</div>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
 else:
-    # Chat history
     st.markdown('<div class="chat-area">', unsafe_allow_html=True)
-
     for message in st.session_state.messages:
         if message["role"] == "user":
             st.markdown(f"""
@@ -860,10 +691,8 @@ else:
                 </div>
             """, unsafe_allow_html=True)
         else:
-            with st.chat_message("assistant"):
-                st.markdown(message["content"])
+            render_answer(message)
 
-    # Typing indicator when thinking
     if st.session_state.is_thinking:
         st.markdown("""
             <div class="msg-row bot">
@@ -877,61 +706,62 @@ else:
                 </div>
             </div>
         """, unsafe_allow_html=True)
-
-    # Suggested questions (shown only before first message)
-    if not st.session_state.messages and not st.session_state.is_thinking:
-        st.markdown("""
-            <div style="margin-top: 32px; margin-bottom: 8px;">
-                <div class="sq-label" style="text-align:left; padding-left: 48px;">Suggested questions</div>
-            </div>
-        """, unsafe_allow_html=True)
-        _, sq_col, _ = st.columns([1, 3, 1])
-        with sq_col:
-            st.markdown('<div class="suggested-q-wrap">', unsafe_allow_html=True)
-            for icon, question in SUGGESTED_QUESTIONS:
-                if st.button(f"{icon}  {question}", key=f"chat_sq_{question[:20]}"):
-                    st.session_state["pending_hint"] = question
-            st.markdown('</div>', unsafe_allow_html=True)
-
     st.markdown('</div>', unsafe_allow_html=True)
 
-    # Consume pending hint as a message
-    if "pending_hint" in st.session_state and st.session_state.session_id:
-        hint_msg = st.session_state.pop("pending_hint")
-        st.session_state.messages.append({"role": "user", "content": hint_msg})
-        st.session_state.is_thinking = True
-        st.session_state.status = "thinking"
-        st.rerun()
 
-    # Chat input
-    user_input = st.chat_input("Type your question here…")
-
-    if user_input:
-        st.session_state.messages.append({"role": "user", "content": user_input})
-        st.session_state.is_thinking = True
-        st.session_state.status = "thinking"
-        st.rerun()
-
-# Answer fetch on rerun when thinking
-if st.session_state.is_thinking and st.session_state.messages:
-    last_user_msg = next(
-        (m["content"] for m in reversed(st.session_state.messages) if m["role"] == "user"),
-        None
+# Consume a suggested question as if it had been typed.
+if "pending_hint" in st.session_state:
+    st.session_state.messages.append(
+        {"role": "user", "content": st.session_state.pop("pending_hint")}
     )
-    if last_user_msg:
+    st.session_state.is_thinking = True
+    st.rerun()
+
+user_input = st.chat_input("Ask about a document…")
+if user_input:
+    st.session_state.messages.append({"role": "user", "content": user_input})
+    st.session_state.is_thinking = True
+    st.rerun()
+
+
+# ─── Fetch the answer ───────────────────────────────────────
+if st.session_state.is_thinking and st.session_state.messages:
+    question = next(
+        (m["content"] for m in reversed(st.session_state.messages) if m["role"] == "user"), None
+    )
+    if question:
+        # Prior turns, as (question, answer) pairs the API replays to the model.
+        history, pending = [], None
+        for m in st.session_state.messages[:-1]:
+            if m["role"] == "user":
+                pending = m["content"]
+            elif pending is not None:
+                history.append((pending, m["content"]))
+                pending = None
+
         try:
             response = requests.post(
                 f"{API_URL}/ask",
-                params={
-                    "session_id": st.session_state.session_id,
-                    "question": last_user_msg
-                }
+                json={"question": question, "history": history},
+                timeout=90,
             )
-            answer = response.json().get("answer", "Sorry, I could not get a response.")
+            response.raise_for_status()
+            result = response.json()
+            message = {
+                "role": "assistant",
+                "content": result["answer"],
+                "citations": result.get("citations", []),
+                "expired_warning": result.get("expired_warning"),
+                "needs_clarification": result.get("needs_clarification", False),
+            }
         except Exception as e:
-            answer = f"⚠️ Error contacting the API: {e}"
+            message = {
+                "role": "assistant",
+                "content": f"⚠️ Could not reach the API: {type(e).__name__}: {e}",
+                "citations": [],
+                "expired_warning": None,
+            }
 
-        st.session_state.messages.append({"role": "assistant", "content": answer})
+        st.session_state.messages.append(message)
         st.session_state.is_thinking = False
-        st.session_state.status = "ready"
         st.rerun()

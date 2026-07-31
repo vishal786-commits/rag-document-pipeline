@@ -1,8 +1,10 @@
-name: CI/CD — Build, Test, and Deploy
+name: CI
 
+# Tests run everywhere. Deployment is manual only -- see the deploy job.
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "**" ]
+  pull_request:
   workflow_dispatch:
 
 env:
@@ -10,12 +12,57 @@ env:
   ECR_REPOSITORY: docmind
 
 jobs:
-  build-test-deploy:
+  # Runs on every branch. Needs no secrets, so a fork or a feature branch is
+  # tested the same way main is. Previously nothing but main was ever tested.
+  test:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements-dev.txt
+
+      - name: Unit tests
+        run: pytest
+
+      - name: Offline retrieval evaluation
+        # BM25 over the committed chunk snapshot: a real regression test, not a
+        # smoke test. Catches a broken chunker, a corrupted snapshot, or a
+        # golden set whose quotes no longer match. Threshold is the measured
+        # offline baseline (0.723) with headroom.
+        run: python -m eval.run_eval --offline --tag ci --fail-under "recall@5=0.65"
+
+      - name: Upload evaluation report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: eval-report
+          path: eval/reports/
+          if-no-files-found: ignore
+
+  # DEPLOYMENT IS OFF.
+  #
+  # This job no longer runs on a push to main. It builds an image, pushes it to
+  # ECR and rolls an ECS service, and the service predates the rewrite -- its
+  # task definition and environment have not been revisited. Merging should not
+  # silently ship to it.
+  #
+  # To re-enable automatic deploys, restore the condition below to:
+  #     if: github.ref == 'refs/heads/main'
+  # and add `push: branches: [main]` back to the triggers.
+  #
+  # Until then it runs only when started by hand from the Actions tab.
+  deploy:
+    needs: test
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -28,7 +75,7 @@ jobs:
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
 
-      - name: Build Docker image
+      - name: Build image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
@@ -37,43 +84,35 @@ jobs:
             -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG \
             -t $ECR_REGISTRY/$ECR_REPOSITORY:latest .
 
-      - name: Health check test
+      - name: Container health check
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}
         run: |
-          docker run -d \
-            -p 8000:8000 \
-            --name docmind-test \
+          docker run -d -p 8000:8000 --name docmind-test \
             -e OPENAI_API_KEY=dummy \
             -e PINECONE_API_KEY=dummy \
+            -e PINECONE_INDEX_NAME=dummy \
             $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-          echo "Waiting for container to boot..."
-
           for i in $(seq 1 20); do
-            HTTP_CODE=$(curl -s -o /dev/null -w "%{http_code}" \
-              --connect-timeout 2 \
+            CODE=$(curl -s -o /dev/null -w "%{http_code}" --connect-timeout 2 \
               http://localhost:8000/health 2>/dev/null || echo "000")
-
-            echo "Attempt $i: HTTP $HTTP_CODE"
-
-            if [ "$HTTP_CODE" = "200" ]; then
+            echo "attempt $i: HTTP $CODE"
+            if [ "$CODE" = "200" ]; then
               echo "PASS: container is healthy"
               docker stop docmind-test
               exit 0
             fi
-
             sleep 3
           done
 
-          echo "FAIL: container did not become healthy after 60 seconds"
-          echo "--- Container logs ---"
+          echo "FAIL: container did not become healthy in 60s"
           docker logs docmind-test
           docker stop docmind-test
           exit 1
 
-      - name: Push Docker image to ECR
+      - name: Push image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           IMAGE_TAG: ${{ github.sha }}

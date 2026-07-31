@@ -1,0 +1,1096 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-07-30T17:06:20.617634+00:00",
+  "generator_model": "gpt-4.1-mini",
+  "chunks_sha256": "f044f78b68ff44612b9b5457e91e0544f9bbcd81e147f688098caa93717501fa",
+  "review_status": "approved",
+  "questions": [
+    {
+      "question": "How does the housing trust ensure that tenants receive support tailored to their needs when allocating homes?",
+      "gold_answer": "When letting our homes, we work closely with applicants and partner agencies to identify any vulnerability or support needs and ensure support packages from appropriate agencies are in place.",
+      "relevant": [
+        {
+          "chunk_id": "lettings-policy#3",
+          "doc_id": "lettings-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "When letting our homes, we will work closely with applicants and partner agencies to identify any vulnerability or support needs"
+        }
+      ],
+      "must_include": [
+        "support",
+        "applicants"
+      ],
+      "must_not_include": [],
+      "id": "q001",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Which policies are related to the Diversity & Inclusion Policy?",
+      "gold_answer": "The related policies and procedures include Diversity and Inclusion Principles, Dignity and Respect Principles, Family Life Policy and Procedures, Resolution Policy and Procedures, Tenancy Policy, Lettings Policy, Anti-Social Behaviour Policy, and Dignity at Work Procedure.",
+      "relevant": [
+        {
+          "chunk_id": "diversity-inclusion-policy#4",
+          "doc_id": "diversity-inclusion-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "4.1 Appendix A – Diversity and Inclusion Principles"
+        }
+      ],
+      "must_include": [
+        "Tenancy Policy",
+        "4.5"
+      ],
+      "must_not_include": [],
+      "id": "q002",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Which properties does the Repairs and Maintenance Policy apply to?",
+      "gold_answer": "This policy applies to properties owned and/or managed by Aster Group, and Aster colleagues, contractors, and customers affected by repair and maintenance activities. This includes East Borough Housing Trust, Central and Cecil Housing Trust, and Enham Trust.",
+      "relevant": [
+        {
+          "chunk_id": "repairs-and-maintenance-policy#0",
+          "doc_id": "repairs-and-maintenance-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "This policy applies to properties owned and/or managed by Aster Group"
+        }
+      ],
+      "must_include": [
+        "Aster Group",
+        "properties"
+      ],
+      "must_not_include": [],
+      "id": "q003",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for ensuring that colleagues and contractors are aware of asbestos risks and have access to the Asbestos Register?",
+      "gold_answer": "Operations and Investment Directors are responsible for ensuring their colleagues and contractors have appropriate awareness of asbestos risks and access to the Asbestos Register.",
+      "relevant": [
+        {
+          "chunk_id": "asbestos-management-policy#7",
+          "doc_id": "asbestos-management-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "Operations and Investment Directors are responsible for ensuring their colleagues and contractors have appropriate awareness of asbestos risks"
+        }
+      ],
+      "must_include": [
+        "Operations and Investment Directors",
+        "Asbestos Register"
+      ],
+      "must_not_include": [],
+      "id": "q004",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "How often will the compensation policy be reviewed?",
+      "gold_answer": "This policy will be reviewed every 3 years unless business need, regulation or legislation prompts an early review.",
+      "relevant": [
+        {
+          "chunk_id": "compensation-policy#10",
+          "doc_id": "compensation-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "This policy will be reviewed every 3 years unless business need, regulation or legislation prompts an early review."
+        }
+      ],
+      "must_include": [
+        "3 years",
+        "Senior Leadership Teams"
+      ],
+      "must_not_include": [],
+      "id": "q005",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Can the council restrict future sales of a property to local people after a Right to Buy sale?",
+      "gold_answer": "Yes, the council reserves the right to place a provision on any sale of properties in designated areas so that future sales of that property may only be to local people, as legislated by section 157 of the Housing Act 1985.",
+      "relevant": [
+        {
+          "chunk_id": "right-to-buy-right-to-acquire-policy#8",
+          "doc_id": "right-to-buy-right-to-acquire-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "We will reserve the right to place a provision on any sale of properties in designated areas"
+        }
+      ],
+      "must_include": [
+        "section 157",
+        "local people"
+      ],
+      "must_not_include": [],
+      "id": "q006",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What responsibilities does the Aster Group Ltd Board have regarding Health & Safety management?",
+      "gold_answer": "The Aster Group Ltd Board ensures proper oversight of Health & Safety issues, sets overall priorities, delegates responsibility to the Group CEO and EB, ensures adequate resources are available, and approves the Group Health & Safety Policy and any material changes.",
+      "relevant": [
+        {
+          "chunk_id": "group-health-safety-policy#4",
+          "doc_id": "group-health-safety-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "ensure proper oversight of Health & Safety issues within the business"
+        }
+      ],
+      "must_include": [
+        "Aster Group Ltd Board",
+        "Health & Safety"
+      ],
+      "must_not_include": [],
+      "id": "q007",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for informing the Housing Team Member if re-housing is required and the expected duration?",
+      "gold_answer": "An Aster surveyor is responsible for informing a Housing Team Member, or the Home Ownership Team if re-housing is required and how long the customer is likely to be out of their home for.",
+      "relevant": [
+        {
+          "chunk_id": "temporary-re-housing-decant-policy#3",
+          "doc_id": "temporary-re-housing-decant-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "An Aster surveyor is responsible for informing a Housing Team Member"
+        }
+      ],
+      "must_include": [
+        "Aster surveyor",
+        "Housing Team Member"
+      ],
+      "must_not_include": [],
+      "id": "q008",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who does the Electrical Installations Safety Policy apply to within Aster premises?",
+      "gold_answer": "The policy applies to all colleagues, contractors, customers and visitors to Aster premises.",
+      "relevant": [
+        {
+          "chunk_id": "electrical-installations-safety-policy#0",
+          "doc_id": "electrical-installations-safety-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "This policy applies to all colleagues, contractors, customers and visitors"
+        }
+      ],
+      "must_include": [
+        "colleagues",
+        "contractors"
+      ],
+      "must_not_include": [],
+      "id": "q009",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for scrutinising the embedding of the Infestation and Pests Policy after 12 months?",
+      "gold_answer": "The embedding of the policy will be scrutinised after 12 months by the Operational Leadership Team.",
+      "relevant": [
+        {
+          "chunk_id": "infestation-and-pests-policy#9",
+          "doc_id": "infestation-and-pests-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "embedding of the policy scrutinised after 12 months by the Operational Leadership Team"
+        }
+      ],
+      "must_include": [
+        "12 months",
+        "Operational Leadership Team"
+      ],
+      "must_not_include": [],
+      "id": "q010",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What is the threshold cost above which major adaptations are referred to the Local Authority for Disabled Facility Grant consideration?",
+      "gold_answer": "All major works above the threshold of £4,500, subject to an increase in line with inflation, are referred to the Local Authority for consideration of a Disabled Facility Grant (DFG).",
+      "relevant": [
+        {
+          "chunk_id": "aids-adaptations-policy#3",
+          "doc_id": "aids-adaptations-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "We will refer all major works above the threshold of £4,500, subject to an increase in line with inflation, to the Local Authority for consideration of a Disabled Facility Grant (DFG)."
+        }
+      ],
+      "must_include": [
+        "£4,500",
+        "Local Authority"
+      ],
+      "must_not_include": [],
+      "id": "q011",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Aster Group ensure that its customer groups are representative of all its customers?",
+      "gold_answer": "The Aster Group has a robust recruitment process for customer groups and is committed to making sure these groups are representative of its customers and all entities under the Aster Group.",
+      "relevant": [
+        {
+          "chunk_id": "customer-voice-policy#6",
+          "doc_id": "customer-voice-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "We will have in place a robust recruitment process to customer groups and are committed to making sure these are representative of our customers"
+        }
+      ],
+      "must_include": [
+        "robust recruitment process",
+        "customer groups"
+      ],
+      "must_not_include": [],
+      "id": "q012",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What types of tenancies does the housing provider offer to new or existing customers?",
+      "gold_answer": "The housing provider offers assured tenancies to any new or existing customer assessed under the Lettings Policy or by agreement with the Local Authority, and assured shorthold tenancies for intermediate rent accommodation and short-term accommodation to help prevent homelessness.",
+      "relevant": [
+        {
+          "chunk_id": "tenancy-policy#2",
+          "doc_id": "tenancy-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "We will issue an assured tenancy to any new or existing customer"
+        }
+      ],
+      "must_include": [
+        "assured tenancy",
+        "Local Authority"
+      ],
+      "must_not_include": [],
+      "id": "q013",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Which related policy addresses issues with abandoned vehicles?",
+      "gold_answer": "The related policy that addresses issues with abandoned vehicles is the Abandoned Vehicle Procedure.",
+      "relevant": [
+        {
+          "chunk_id": "anti-social-behaviour-policy#17",
+          "doc_id": "anti-social-behaviour-policy",
+          "page": 6,
+          "grade": 3,
+          "quote": "- 4.18 Abandoned Vehicle Procedure"
+        }
+      ],
+      "must_include": [
+        "Abandoned Vehicle Procedure"
+      ],
+      "must_not_include": [],
+      "id": "q014",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Does the Environmental Sustainability Policy apply to housing and property management activities?",
+      "gold_answer": "Yes, the policy applies across all group activities, including the provision of housing, property and estates maintenance and management.",
+      "relevant": [
+        {
+          "chunk_id": "environmental-sustainability-policy#0",
+          "doc_id": "environmental-sustainability-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "This policy applies across all our group activities, including the provision of housing, property and estates maintenance and management"
+        }
+      ],
+      "must_include": [
+        "housing",
+        "property"
+      ],
+      "must_not_include": [],
+      "id": "q015",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for the day-to-day management of lifts according to the policy?",
+      "gold_answer": "The Contracts Manager (lifts) takes day-to-day responsibility for managing lifts by implementing the Lifts Procedures. (The Building Safety and Compliance Manager and the Customer Services Manager for EBHT).",
+      "relevant": [
+        {
+          "chunk_id": "lifts-lifting-equipment-policy#4",
+          "doc_id": "lifts-lifting-equipment-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "The Contracts Manager (lifts) takes day-to-day responsibility for managing lifts by implementing the Lifts Procedures."
+        }
+      ],
+      "must_include": [
+        "Contracts Manager",
+        "day-to-day"
+      ],
+      "must_not_include": [],
+      "id": "q016",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "How soon after a property visit will I receive the survey report regarding damp, mould, or condensation issues?",
+      "gold_answer": "In most cases, we would expect to receive the survey within 5 working days of the visit to the property.",
+      "relevant": [
+        {
+          "chunk_id": "damp-mould-condensation-policy#10",
+          "doc_id": "damp-mould-condensation-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "we would expect to receive the survey within 5 working days of the visit"
+        }
+      ],
+      "must_include": [
+        "5 working days",
+        "survey"
+      ],
+      "must_not_include": [],
+      "id": "q017",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What is a Variable Service Charge and how does it differ from a Fixed Service Charge?",
+      "gold_answer": "A Variable Service Charge is based on the actual cost of providing the service and can increase or decrease accordingly, while a Fixed Service Charge is a fixed fee for the year regardless of the actual cost of the service provided.",
+      "relevant": [
+        {
+          "chunk_id": "service-charge-policy#2",
+          "doc_id": "service-charge-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "A Variable Service Charge is based on the actual cost of providing the service or services and can increase or decrease accordingly."
+        }
+      ],
+      "must_include": [
+        "Variable Service Charge",
+        "Fixed Service Charge"
+      ],
+      "must_not_include": [],
+      "id": "q018",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does Aster support leaseholders in engaging with leasehold policies and procedures?",
+      "gold_answer": "Individual leaseholders and shared owners are invited to join an online forum through our Customer Voice Team, which provides opportunities to be engaged on leasehold policies and procedures.",
+      "relevant": [
+        {
+          "chunk_id": "leasehold-freehold-policy#8",
+          "doc_id": "leasehold-freehold-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "Individual leaseholders and shared owners are invited to join an online forum"
+        }
+      ],
+      "must_include": [
+        "leaseholders",
+        "Customer Voice Team"
+      ],
+      "must_not_include": [],
+      "id": "q019",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What factors should landlords consider to ensure homes remain accessible for people with disabilities when carrying out decent home improvements?",
+      "gold_answer": "Landlords should ensure that works undertaken do not make the home more difficult to use for a person with disabilities and consider lifetime homes when carrying out work to make homes decent.",
+      "relevant": [
+        {
+          "chunk_id": "a-decent-home-definition-and-guidance-for-implementation#62",
+          "doc_id": "a-decent-home-definition-and-guidance-for-implementation",
+          "page": 21,
+          "grade": 3,
+          "quote": "ensuring that works undertaken do not make the home more difficult to use for a person with disabilities, considering lifetime homes"
+        }
+      ],
+      "must_include": [
+        "landlords",
+        "disabilities"
+      ],
+      "must_not_include": [],
+      "id": "q020",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "What are tenants reminded of regarding their behaviour towards employees or contractors?",
+      "gold_answer": "Customers are reminded of their tenancy obligation that states customers must not, nor must anyone living in or visiting the Property, harass, hinder, obstruct, threaten, abuse or assault any employee, agent or contractor of ours whilst they are carrying out their duties, or at any other time, whether face to face, or remotely by telephone, letter, email or social media.",
+      "relevant": [
+        {
+          "chunk_id": "unreasonable-behaviour-policy#8",
+          "doc_id": "unreasonable-behaviour-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "Customers are reminded of their tenancy obligation that states customers must not, nor must anyone living in or visiting the Property, harass, hinder, obstruct, threaten, abuse or assault any employee, agent or contractor of ours whilst they are carrying out their duties, or at any other time, whether face to face, or remotely by telephone, letter, email or social media."
+        }
+      ],
+      "must_include": [
+        "tenancy obligation",
+        "employee"
+      ],
+      "must_not_include": [],
+      "id": "q021",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who does the Neighbourhood Management Policy apply to in Aster Group communities?",
+      "gold_answer": "This policy applies to those who live and work in Aster Group neighbourhoods and communities, including leaseholders and shared owners where Aster is the landlord, managing agent, and/or freeholder.",
+      "relevant": [
+        {
+          "chunk_id": "neighbourhood-management-policy#1",
+          "doc_id": "neighbourhood-management-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "This policy applies to those who live and work in Aster Group neighbourhoods and communities."
+        }
+      ],
+      "must_include": [
+        "leaseholder",
+        "Aster Group"
+      ],
+      "must_not_include": [],
+      "id": "q022",
+      "type": "factual",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for managing asbestos risks while also ensuring environmental sustainability practices such as preventing pollution and controlling nuisances are upheld in housing management?",
+      "gold_answer": "The Contracts Manager (Asbestos) is the Responsible Person for managing asbestos risks, while the Environmental Sustainability Policy emphasizes preventing pollution and controlling nuisances like noise and dust to minimize environmental impact. Both roles contribute to safe and sustainable housing management.",
+      "relevant": [
+        {
+          "chunk_id": "asbestos-management-policy#6",
+          "doc_id": "asbestos-management-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "2.12 The Contracts Manager (Asbestos) is the Responsible Person."
+        },
+        {
+          "chunk_id": "environmental-sustainability-policy#2",
+          "doc_id": "environmental-sustainability-policy",
+          "page": 1,
+          "grade": 2,
+          "quote": "preventing pollution"
+        }
+      ],
+      "must_include": [
+        "Contracts Manager",
+        "preventing pollution"
+      ],
+      "must_not_include": [],
+      "id": "q023",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Unreasonable Behaviour Policy ensure fair treatment of customers who may also be considered adults at risk under the Safeguarding Adults at Risk Policy, and what roles are involved in managing these situations?",
+      "gold_answer": "The Unreasonable Behaviour Policy ensures all customers, including those exhibiting unreasonable behaviours, are dealt with fairly and appropriately, recognizing valid points and seeking solutions. The Safeguarding Adults at Risk Policy appoints a Designated Safeguarding Trustee who leads safeguarding matters, supports Designated Safeguarding Leads, and ensures policies are reviewed and risks managed, thereby providing oversight and support in cases involving adults at risk.",
+      "relevant": [
+        {
+          "chunk_id": "unreasonable-behaviour-policy#5",
+          "doc_id": "unreasonable-behaviour-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "All customers should be dealt with fairly, honestly, consistently, and appropriately including those whose actions are considered unreasonable."
+        },
+        {
+          "chunk_id": "safeguarding-adults-at-risk-policy#8",
+          "doc_id": "safeguarding-adults-at-risk-policy",
+          "page": 3,
+          "grade": 2,
+          "quote": "Ensures a Designated Safeguarding Lead is appointed for Safeguarding Adults and Safeguarding Children."
+        }
+      ],
+      "must_include": [
+        "Designated Safeguarding Trustee",
+        "customers"
+      ],
+      "must_not_include": [],
+      "id": "q024",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Electrical Installations Safety Policy apply to agricultural workers' dwellings provided as part of their employment, considering the Fitness for Human Habitation Act 2018?",
+      "gold_answer": "The Electrical Installations Safety Policy applies to properties owned or managed by Aster Group, excluding leasehold, which would include dwellings provided to agricultural workers as part of their employment. The Fitness for Human Habitation Act 2018 implies that such dwellings must be fit for human habitation, with employer obligations similar to landlords under section 9A, ensuring safety including electrical installations.",
+      "relevant": [
+        {
+          "chunk_id": "electrical-installations-safety-policy#0",
+          "doc_id": "electrical-installations-safety-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "This policy extends to properties owned and/or managed by entities of the Aster Group except leasehold."
+        },
+        {
+          "chunk_id": "fitness-for-human-habitation-act-2018#13",
+          "doc_id": "fitness-for-human-habitation-act-2018",
+          "page": 8,
+          "grade": 2,
+          "quote": "There is implied as part of the contract of employment (in spite of any stipulation to the contrary) a term having the same effect as the covenant that would be implied by section 9A if the dwelling were let by a lease to which that section applies."
+        }
+      ],
+      "must_include": [
+        "Aster Group",
+        "section 9A"
+      ],
+      "must_not_include": [],
+      "id": "q025",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the policy differentiate between leaseholders sub-letting their property and residents in supported housing with licences regarding their rights and responsibilities?",
+      "gold_answer": "Leaseholders who sub-let become landlords and are responsible for service charges and lease conditions, while residents in supported housing receive licences for shared facilities with no exclusive property use, intended for time-limited support.",
+      "relevant": [
+        {
+          "chunk_id": "leasehold-freehold-policy#9",
+          "doc_id": "leasehold-freehold-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "We will grant consent for leaseholders to sub-let their property dependent upon the terms of their lease."
+        },
+        {
+          "chunk_id": "tenancy-policy#5",
+          "doc_id": "tenancy-policy",
+          "page": 2,
+          "grade": 2,
+          "quote": "We will award a Licence where the resident shares facilities and does not have exclusive use of the property."
+        }
+      ],
+      "must_include": [
+        "leaseholder",
+        "Licence"
+      ],
+      "must_not_include": [],
+      "id": "q026",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Designated Trustee for Safeguarding collaborate with housing staff to manage risks related to infestations and pests that could affect vulnerable children in communal areas?",
+      "gold_answer": "The Designated Trustee for Safeguarding leads on safeguarding matters and supports Designated Safeguarding Leads, ensuring risks are managed, while the Infestation and Pests Policy requires prompt reporting and risk assessment of infestations in communal areas, which helps identify and mitigate risks to vulnerable children.",
+      "relevant": [
+        {
+          "chunk_id": "safeguarding-children-at-risk-policy#10",
+          "doc_id": "safeguarding-children-at-risk-policy",
+          "page": 4,
+          "grade": 3,
+          "quote": "Designated Trustee for Safeguarding (non-exec. Board member) - Takes the lead on safeguarding matters, ensuring Aster adheres to regulatory requirements and best practice"
+        },
+        {
+          "chunk_id": "infestation-and-pests-policy#2",
+          "doc_id": "infestation-and-pests-policy",
+          "page": 1,
+          "grade": 2,
+          "quote": "When infestations or pests are reported to us, we will assess the risk by asking the customer relevant questions to ascertain the support needed."
+        }
+      ],
+      "must_include": [
+        "Designated Trustee",
+        "risk"
+      ],
+      "must_not_include": [],
+      "id": "q027",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Damp, Mould & Condensation Policy inform the decision to temporarily re-house tenants under the Temporary Re-Housing (Decant) Policy when major repairs are needed?",
+      "gold_answer": "The Damp, Mould & Condensation Policy includes investigating recurring issues and identifying remedial works when damp, mould, or condensation is found, which can inform the Temporary Re-Housing Policy's planned re-housing when major repair works make a property unsafe for tenants to remain. Thus, if damp or mould issues require major repairs, tenants may be temporarily re-housed to ensure safety during these works.",
+      "relevant": [
+        {
+          "chunk_id": "damp-mould-condensation-policy#12",
+          "doc_id": "damp-mould-condensation-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "We will investigate trends and analyse recurring issues within our homes."
+        },
+        {
+          "chunk_id": "temporary-re-housing-decant-policy#2",
+          "doc_id": "temporary-re-housing-decant-policy",
+          "page": 1,
+          "grade": 2,
+          "quote": "Planned Re-Housing: These are required when certain works are needing to be completed to a property and the nature of these works would make the property unsafe for the customer to remain whilst they are being carried out."
+        }
+      ],
+      "must_include": [
+        "major repair works",
+        "planned re-housing"
+      ],
+      "must_not_include": [],
+      "id": "q028",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the policy ensure that lift inspectors are both technically competent and operate within an inclusive and fair workplace culture?",
+      "gold_answer": "The lift policy ensures inspectors have sufficient practical and theoretical knowledge to assess lift safety, while the diversity policy commits to creating a fair and inclusive culture where diversity is welcomed and celebrated, promoting respectful communication and behavior.",
+      "relevant": [
+        {
+          "chunk_id": "lifts-lifting-equipment-policy#3",
+          "doc_id": "lifts-lifting-equipment-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "We will only allow inspectors to complete thorough examinations if they have sufficient appropriate practical and theoretical knowledge and experience of the lifting equipment"
+        },
+        {
+          "chunk_id": "diversity-inclusion-policy#1",
+          "doc_id": "diversity-inclusion-policy",
+          "page": 1,
+          "grade": 2,
+          "quote": "Inclusivity and fairness are central to The Aster Way, and we are committed to creating a fair and inclusive culture where diversity is welcomed and celebrated."
+        }
+      ],
+      "must_include": [
+        "inspectors",
+        "inclusive"
+      ],
+      "must_not_include": [],
+      "id": "q029",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How do ASB Officers and Housing Managers handle legal actions related to anti-social behaviour, and under what circumstances might tenants receive financial compensation for service failures related to such cases?",
+      "gold_answer": "ASB Officers and Housing Managers have delegated responsibility to complete court paperwork and advocate in court for injunctions or possession related to anti-social behaviour. Tenants may receive financial compensation for inconvenience and distress following a failure of service, with guidance provided through the Aster Compensation Calculator.",
+      "relevant": [
+        {
+          "chunk_id": "anti-social-behaviour-policy#12",
+          "doc_id": "anti-social-behaviour-policy",
+          "page": 4,
+          "grade": 3,
+          "quote": "ASB Officers, Home Ownership Managers, ASB Service Managers/EBHT Tenancy & Estate Managers, and Heads of Housing/Director of Housing Services have delegated responsibility to complete and sign all court paperwork"
+        },
+        {
+          "chunk_id": "compensation-policy#9",
+          "doc_id": "compensation-policy",
+          "page": 3,
+          "grade": 2,
+          "quote": "financial compensation for inconvenience and distress is appropriate following a failure of service"
+        }
+      ],
+      "must_include": [
+        "ASB Officers",
+        "financial compensation"
+      ],
+      "must_not_include": [],
+      "id": "q030",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for ensuring the lettable standard of properties and who manages the day-to-day responsibility for lifts in housing properties?",
+      "gold_answer": "The lettable standard of properties is ensured as per the Lettings Policy which states that every property will be let in a safe, clean condition reaching the defined lettable standard. The Contracts Manager (lifts) takes day-to-day responsibility for managing lifts by implementing the Lifts Procedures.",
+      "relevant": [
+        {
+          "chunk_id": "lettings-policy#5",
+          "doc_id": "lettings-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "2.14 We will make sure every property is let in a safe, clean condition which reaches our defined lettable standard."
+        },
+        {
+          "chunk_id": "lifts-lifting-equipment-policy#4",
+          "doc_id": "lifts-lifting-equipment-policy",
+          "page": 2,
+          "grade": 2,
+          "quote": "2.11 The Contracts Manager (lifts) takes day-to-day responsibility for managing lifts by implementing the Lifts Procedures."
+        }
+      ],
+      "must_include": [
+        "lettable standard",
+        "Contracts Manager"
+      ],
+      "must_not_include": [],
+      "id": "q031",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is responsible for ensuring compliance with the Smoke & Carbon Monoxide Alarm Policy and the Section 20 Policy in housing management?",
+      "gold_answer": "The Smoke & Carbon Monoxide Alarm Policy does not specify a responsible person, but the Section 20 Policy states that the Service Charge Manager is responsible for ensuring that the policy is implemented, and all employees involved must comply with the policy requirements.",
+      "relevant": [
+        {
+          "chunk_id": "smoke-carbon-monoxide-alarm-policy#1",
+          "doc_id": "smoke-carbon-monoxide-alarm-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "We will ensure we are compliant with the Smoke and Carbon Monoxide Alarm (Amendment) Regulations 2022"
+        },
+        {
+          "chunk_id": "section-20-policy#7",
+          "doc_id": "section-20-policy",
+          "page": 3,
+          "grade": 2,
+          "quote": "The Service Charge Manager is responsible for ensuring that this policy is implemented."
+        }
+      ],
+      "must_include": [
+        "Service Charge Manager",
+        "Smoke & Carbon Monoxide Alarm Policy"
+      ],
+      "must_not_include": [],
+      "id": "q032",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How does the Compensation Policy address claims related to asbestos damage reported by customers, and what roles do Housing and Independent Living colleagues play in supporting access for asbestos management?",
+      "gold_answer": "The Compensation Policy considers each claim for compensation based on evidence including photographs and witness statements, but will not compensate for damage caused by the customer's negligence. Housing and Independent Living colleagues support staff and contractors in gaining access for asbestos management, while customers are expected to report damage and grant access when requested.",
+      "relevant": [
+        {
+          "chunk_id": "compensation-policy#5",
+          "doc_id": "compensation-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "We will consider each claim for compensation on its evidence and decisions will be based on individual circumstances"
+        },
+        {
+          "chunk_id": "asbestos-management-policy#7",
+          "doc_id": "asbestos-management-policy",
+          "page": 2,
+          "grade": 2,
+          "quote": "Housing and Independent Living colleagues will support staff & contractors in gaining access where needed."
+        }
+      ],
+      "must_include": [
+        "compensation",
+        "Housing and Independent Living colleagues"
+      ],
+      "must_not_include": [],
+      "id": "q033",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "How should Aster Group staff balance safeguarding responsibilities with confidentiality when dealing with tenants affected by pest infestations that may require temporary rehousing?",
+      "gold_answer": "Aster Group staff must report all safeguarding concerns and maintain confidentiality without promising secrecy, seeking advice from the People Team if concerns involve colleagues. Regarding pest infestations, customer confidentiality is maintained with information shared only with relevant personnel, and tenants may be temporarily rehoused with support under the Temporary Rehousing Policy during treatment.",
+      "relevant": [
+        {
+          "chunk_id": "safeguarding-children-at-risk-policy#12",
+          "doc_id": "safeguarding-children-at-risk-policy",
+          "page": 4,
+          "grade": 3,
+          "quote": "Attend all mandatory safeguarding training appropriate to role and setting"
+        },
+        {
+          "chunk_id": "infestation-and-pests-policy#7",
+          "doc_id": "infestation-and-pests-policy",
+          "page": 3,
+          "grade": 2,
+          "quote": "Customer confidentiality will be maintained regarding individual cases of infestation."
+        }
+      ],
+      "must_include": [
+        "safeguarding",
+        "confidentiality"
+      ],
+      "must_not_include": [],
+      "id": "q034",
+      "type": "multi_hop",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is the policy owner of the Tenancy Policy effective from April 23, 2025?",
+      "gold_answer": "The policy owner of the Tenancy Policy effective from April 23, 2025, is the Regional Operations Director.",
+      "relevant": [
+        {
+          "chunk_id": "tenancy-policy#15",
+          "doc_id": "tenancy-policy",
+          "page": 5,
+          "grade": 3,
+          "quote": "Policy Owner: Regional Operations Director"
+        }
+      ],
+      "must_include": [
+        "Regional Operations Director",
+        "policy owner"
+      ],
+      "must_not_include": [],
+      "id": "q035",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is the policy owner of the Recharges Policy effective from 01/04/2024?",
+      "gold_answer": "The policy owner of the Recharges Policy effective from 01/04/2024 is the Regional Operations Director - West.",
+      "relevant": [
+        {
+          "chunk_id": "recharges-policy#9",
+          "doc_id": "recharges-policy",
+          "page": 4,
+          "grade": 3,
+          "quote": "Policy Owner: Regional Operations Director - West"
+        }
+      ],
+      "must_include": [
+        "Regional Operations Director - West",
+        "01/04/2024"
+      ],
+      "must_not_include": [],
+      "id": "q036",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is the owner of the Diversity & Inclusion Policy effective from 01/11/2024?",
+      "gold_answer": "The Policy Owner of the Diversity & Inclusion Policy effective from 01/11/2024 is the Chief Innovation Officer.",
+      "relevant": [
+        {
+          "chunk_id": "diversity-inclusion-policy#5",
+          "doc_id": "diversity-inclusion-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "Policy Owner: Chief Innovation Officer"
+        }
+      ],
+      "must_include": [
+        "Chief Innovation Officer",
+        "Policy Owner"
+      ],
+      "must_not_include": [],
+      "id": "q037",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "What is the expected lifetime of the wall structure component in houses and bungalows according to the Decent Home guidance?",
+      "gold_answer": "The expected lifetime of the wall structure component in houses and bungalows is 80 years.",
+      "relevant": [
+        {
+          "chunk_id": "a-decent-home-definition-and-guidance-for-implementation#110",
+          "doc_id": "a-decent-home-definition-and-guidance-for-implementation",
+          "page": 34,
+          "grade": 3,
+          "quote": "Wall structure*|80|80|80"
+        }
+      ],
+      "must_include": [
+        "80",
+        "wall structure"
+      ],
+      "must_not_include": [],
+      "id": "q038",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is the Policy Owner of the Fire Safety Policy effective from 01/09/2022?",
+      "gold_answer": "The Policy Owner of the Fire Safety Policy effective from 01/09/2022 is the Health & Safety Director.",
+      "relevant": [
+        {
+          "chunk_id": "fire-safety-policy#12",
+          "doc_id": "fire-safety-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "Policy Owner: Health & SafetyDirector"
+        }
+      ],
+      "must_include": [
+        "Health & Safety Director",
+        "01/09/2022"
+      ],
+      "must_not_include": [],
+      "id": "q039",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "When does the Vulnerability Policy become effective and when does it expire?",
+      "gold_answer": "The Vulnerability Policy becomes effective from 19/09/2025 and expires on 19/08/2028.",
+      "relevant": [
+        {
+          "chunk_id": "vulnerability-policy#11",
+          "doc_id": "vulnerability-policy",
+          "page": 4,
+          "grade": 3,
+          "quote": "Effective From: 19/09/2025"
+        }
+      ],
+      "must_include": [
+        "19/09/2025",
+        "19/08/2028"
+      ],
+      "must_not_include": [],
+      "id": "q040",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "Who is the policy owner of the Customer Voice Policy effective from 11/01/2024?",
+      "gold_answer": "The policy owner of the Customer Voice Policy effective from 11/01/2024 is the Assistant Director – Business Support.",
+      "relevant": [
+        {
+          "chunk_id": "customer-voice-policy#10",
+          "doc_id": "customer-voice-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "Policy Owner: Assistant Director – Business Support"
+        }
+      ],
+      "must_include": [
+        "Assistant Director – Business Support",
+        "11/01/2024"
+      ],
+      "must_not_include": [],
+      "id": "q041",
+      "type": "table",
+      "review_status": "approved"
+    },
+    {
+      "question": "What does the Damp, Mould & Condensation Policy cover in terms of managing and preventing these issues in homes?",
+      "gold_answer": "The policy covers proactive investigation and analysis of recurring damp, mould, and condensation issues, communication and support for customers, inspection of homes especially when empty or exchanged, and investment in homes to implement preventive solutions.",
+      "relevant": [
+        {
+          "chunk_id": "damp-mould-condensation-policy#12",
+          "doc_id": "damp-mould-condensation-policy",
+          "page": 3,
+          "grade": 3,
+          "quote": "We will investigate trends and analyse recurring issues within our homes."
+        }
+      ],
+      "must_include": [
+        "customers",
+        "investigate"
+      ],
+      "must_not_include": [],
+      "id": "q042",
+      "type": "summarization",
+      "review_status": "approved"
+    },
+    {
+      "question": "What are the overall responsibilities and expectations outlined in the Smoke & Carbon Monoxide Alarm Policy?",
+      "gold_answer": "The policy requires customers to report faults with alarms and grant access when requested, and allows the Executive Board to delegate responsibilities as needed.",
+      "relevant": [
+        {
+          "chunk_id": "smoke-carbon-monoxide-alarm-policy#5",
+          "doc_id": "smoke-carbon-monoxide-alarm-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "Customers are expected to report faults with alarms and grant access when requested."
+        }
+      ],
+      "must_include": [
+        "customers",
+        "Executive Board"
+      ],
+      "must_not_include": [],
+      "id": "q043",
+      "type": "summarization",
+      "review_status": "approved"
+    },
+    {
+      "question": "What are the overall responsibilities and accountability outlined in the Asbestos Management Policy?",
+      "gold_answer": "The policy assigns overall accountability to the Chief Executive Officer and designates Aster as the Dutyholder, with specific roles for various directors and managers to implement and manage asbestos safety.",
+      "relevant": [
+        {
+          "chunk_id": "asbestos-management-policy#6",
+          "doc_id": "asbestos-management-policy",
+          "page": 2,
+          "grade": 3,
+          "quote": "The Chief Executive Officer retains overall accountability for this policy."
+        }
+      ],
+      "must_include": [
+        "Chief Executive Officer",
+        "Dutyholder"
+      ],
+      "must_not_include": [],
+      "id": "q044",
+      "type": "summarization",
+      "review_status": "approved"
+    },
+    {
+      "question": "What does the Environmental Sustainability Policy require in terms of monitoring and review?",
+      "gold_answer": "The policy requires progress to be reported annually in the ESG report, continuous monitoring of effectiveness, scrutiny after 12 months by the Group Investment & Assets Panel, and review every 3 years unless prompted earlier.",
+      "relevant": [
+        {
+          "chunk_id": "environmental-sustainability-policy#3",
+          "doc_id": "environmental-sustainability-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "Progress to achieve our policy statements will be reported in our annual ESG report."
+        }
+      ],
+      "must_include": [
+        "12 months",
+        "Group Investment & Assets Panel"
+      ],
+      "must_not_include": [],
+      "id": "q045",
+      "type": "summarization",
+      "review_status": "approved"
+    },
+    {
+      "question": "What does the Infestation and Pests Policy cover regarding responsibilities and procedures for treating infestations and pests?",
+      "gold_answer": "The policy covers the responsibilities for treating and eradicating infestations and pests in communal areas and structural parts of properties, while customers are responsible for infestations within their homes unless otherwise stated. It requires customers to report infestations promptly and outlines the assessment process for determining support needed.",
+      "relevant": [
+        {
+          "chunk_id": "infestation-and-pests-policy#2",
+          "doc_id": "infestation-and-pests-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "Our responsibilities are to treat and eradicate infestations and pests"
+        }
+      ],
+      "must_include": [
+        "customers",
+        "responsibilities"
+      ],
+      "must_not_include": [],
+      "id": "q046",
+      "type": "summarization",
+      "review_status": "approved"
+    },
+    {
+      "question": "What does the Compensation Policy cover regarding payments for customers who must move due to Aster's activities?",
+      "gold_answer": "The policy covers disturbance payments to reimburse customers for reasonable costs incurred from moving permanently due to Aster's activities, including immediate moving expenses and reasonable consequential expenses, as well as possible additional compensation for approved property improvements.",
+      "relevant": [
+        {
+          "chunk_id": "compensation-policy#3",
+          "doc_id": "compensation-policy",
+          "page": 1,
+          "grade": 3,
+          "quote": "Disturbance payments are made to cover the actual reasonable costs incurred by customers when they have to move permanently as a result of Aster’s activities."
+        }
+      ],
+      "must_include": [
+        "disturbance payments",
+        "customers"
+      ],
+      "must_not_include": [],
+      "id": "q047",
+      "type": "summarization",
+      "review_status": "approved"
+    }
+  ],
+  "review": {
+    "reviewed_by": "Claude (automated review pass, not a domain expert)",
+    "reviewed_on": "2026-07-30",
+    "checks_performed": [
+      "every quote verified verbatim against its source chunk, after normalising markdown",
+      "every multi_hop question confirmed to span 2 distinct documents",
+      "no question refers to 'the extract' or 'this document'",
+      "every question carries at least one must_include string",
+      "type quotas met: 22 factual, 12 multi_hop, 7 table, 6 summarization"
+    ],
+    "known_weaknesses": [
+      "5 of the 7 table questions target policy governance blocks rather than content tables, so that slice is narrower than intended",
+      "some must_include strings are generic words ('customers', 'responsibilities') that any answer would contain, so they discriminate weakly",
+      "30 of 36 documents are represented; 6 contribute no question",
+      "a domain expert has not confirmed the gold answers are operationally correct"
+    ]
+  }
+}

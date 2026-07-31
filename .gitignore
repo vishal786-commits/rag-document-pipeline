@@ -2,5 +2,12 @@
 .venv/
 __pycache__/
 *.pyc
-uploaded_pdfs/
+.pytest_cache/
 .docker/
+
+# Evaluation output. eval/baseline.json is committed as the reference point for
+# `--compare`; individual runs and reports are local artifacts.
+eval/.cache/
+eval/runs/
+eval/reports/
+eval/golden_set.draft.json

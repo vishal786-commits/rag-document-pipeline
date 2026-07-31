@@ -1,0 +1,6 @@
+# Development and evaluation only. Kept separate from requirements.txt because
+# ragas pulls in datasets/pandas, adding ~300MB to an image that never runs them.
+-r requirements.txt
+
+pytest==9.1.1
+ruff
