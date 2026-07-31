@@ -1,7 +1,11 @@
-# Aster Policy Assistant
+# DocMind
 
-Agentic RAG over 36 UK social-housing policy documents. Answers are grounded in
-the policy library and cited to the document and page they came from.
+An agentic RAG system. Point it at a corpus of documents and it answers questions
+strictly from them, citing the document and page every claim came from.
+
+The reference corpus here is 36 UK social-housing policy documents, used as a
+realistic test set — long formal PDFs with headings, tables, governance blocks,
+version numbers and expiry dates. Nothing in the pipeline is specific to it.
 
 <p align="center">
   <img src="assets/architecture.svg" alt="Ingestion and query architecture" width="100%">
@@ -35,13 +39,14 @@ citations possible at all. BM25 is fitted once at startup.
 
 **The router decides how much work a question is worth.** A greeting does not need
 an embedding call, a vector query, a BM25 scan and a six-chunk generation. Questions
-*about* the corpus ("which policies are expired?") are metadata lookups, not
-retrieval problems, and go to tools instead.
+*about* the corpus ("which documents are expired?") are metadata lookups, not
+retrieval problems, and go to tools instead. A question too vague to search gets
+asked back rather than guessed at.
 
-**Expired policies are flagged, never hidden.** Eight documents are past their
-review date, five of them building-safety. They stay retrievable — they are the
-operative documents staff are handed — but any answer citing one carries a warning
-computed in code, not requested of the prompt.
+**Stale documents are flagged, never hidden.** Where a corpus carries expiry
+dates, documents past them stay retrievable — they are usually still the operative
+version people hold — but any answer citing one carries a warning computed in code,
+not requested of the prompt. Eight of the 36 reference documents are past review.
 
 ---
 
@@ -58,7 +63,7 @@ by deterministic string checks plus an LLM judge.
 
 | Generation | Grounded | Correct | Complete | Citations |
 |------------|---------:|--------:|---------:|----------:|
-| gpt-4.1-mini @ T=0 | 0.966 | 0.983 | 0.970 | 0.966 |
+| gpt-4.1-mini @ T=0 | 0.987 | 0.991 | 0.987 | 0.987 |
 
 Precision@5 is 0.200. Read it against its ceiling, not against 1.0: most questions
 have a single relevant chunk, so 0.2 is the maximum attainable and the retriever is
@@ -162,19 +167,35 @@ report zero recall exactly when the numbers matter most.
 
 ## Limitations
 
-- **Awaab's Law is not in the corpus.** The documents covering it were removed in
-  the 2026-07-30 reduction, so those questions are declined rather than answered by
-  inference from the Damp & Mould Policy.
-- **Audience filtering is inactive.** No remaining document is tenant-facing (34 are
-  `staff`, 2 are `reference`), so `audience="tenant"` returns only reference
-  material. The service warns about this at startup.
+- **Ingestion needs a catalogue.** `rag/catalogue.py` reads document metadata from a
+  Markdown table and refuses to run unless it reconciles exactly with the files on
+  disk. Pointing DocMind at a new corpus means writing that table. The strictness is
+  deliberate — a knowledge base that quietly lost a document is worse than one that
+  refuses to build — but it is not zero-configuration.
 - **Governance tables extract imperfectly.** Cell boundaries are sometimes split
-  mid-value, so a policy's owner or approver is unreliable. Version and expiry dates
-  come from the catalogue, not those tables, and are accurate.
+  mid-value, so a document's owner or approver is unreliable. Version and expiry
+  dates come from the catalogue, not those tables, and are accurate.
 - **The question set was reviewed by an automated pass, not a domain expert.** Quote
   verbatimness, document spread and type quotas are checked mechanically; whether the
   gold answers are operationally correct is not.
 - **`pymupdf4llm` is AGPL.** Fine internally; it matters if this ships closed-source.
+
+Two limits specific to the reference corpus rather than the system: audience
+filtering is inactive because no remaining document is tenant-facing (the service
+warns at startup), and Awaab's Law questions are declined because the documents
+covering it were dropped from the set.
+
+---
+
+## CI
+
+`test` runs pytest and the offline evaluation on every branch and pull request,
+with no secrets required.
+
+**Deployment is off.** The `deploy` job builds to ECR and rolls an ECS service
+that predates this rewrite, so it no longer triggers on a push to `main` — it runs
+only when started by hand. Re-enabling it is two lines, documented in
+`.github/workflows/ci.yml`.
 
 ---
 

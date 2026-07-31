@@ -37,17 +37,18 @@ MAX_ATTEMPTS = 2
 MAX_SUBQUESTIONS = 3
 
 SMALLTALK_REPLY = (
-    "I answer questions about Aster Group's policy library -- repairs, tenancy, "
-    "safety, complaints, safeguarding and so on. What would you like to know?"
+    "I answer questions from the document library loaded into this knowledge base -- "
+    "repairs, tenancy, safety, complaints, safeguarding and so on. "
+    "What would you like to know?"
 )
 OUT_OF_SCOPE_REPLY = (
-    "That is outside the Aster policy library, so I have nothing to answer from. "
-    "Ask me about an Aster policy and I will cite the document and page."
+    "That is outside the document library I have loaded, so I have nothing to answer "
+    "from. Ask me about something it covers and I will cite the document and page."
 )
 AGENT_SYSTEM = (
-    "You answer questions about Aster Group's policy library using the tools provided. "
-    "Use list_policies for questions about which policies exist or their status, "
-    "policy_sections for what a policy covers, and search_policies for policy content. "
+    "You answer questions about the document library using the tools provided. "
+    "Use list_policies for questions about which documents exist or their status, "
+    "policy_sections for what a document covers, and search_policies for its content. "
     "Answer only from tool results, and cite the source file and page."
 )
 
@@ -78,17 +79,18 @@ class Route(BaseModel):
 
     route: Literal["kb", "multi_policy", "corpus", "unclear", "smalltalk", "out_of_scope"] = Field(
         description=(
-            "'kb' for a question answered by the content of one policy area -- the default "
+            "'kb' for a question answered by the content of one document -- the default "
             "for anything about housing, repairs, tenancies, safety, complaints or "
             "safeguarding.\n"
-            "'multi_policy' when answering needs facts from two or more distinct policy "
-            "areas, e.g. an end-to-end process spanning repairs, vulnerability and complaints.\n"
+            "'multi_policy' when answering needs facts from two or more distinct documents, "
+            "e.g. an end-to-end process spanning repairs, vulnerability and complaints.\n"
             "'corpus' for questions ABOUT the collection rather than its content: which "
-            "policies exist, how many, which are expired, what sections a named policy has.\n"
+            "documents exist, how many, which are expired, what sections one has.\n"
             "'unclear' only when the question is too vague to search for at all, e.g. "
             "'what is the timescale?' with no subject.\n"
             "'smalltalk' for greetings and questions about you.\n"
-            "'out_of_scope' when the subject is clearly unrelated to social housing."
+            "'out_of_scope' when the subject is clearly unrelated to the library's domain "
+            "of social housing."
         )
     )
 
@@ -180,11 +182,11 @@ def build_graph(retriever: KBRetriever):
             [
                 (
                     "system",
-                    "The user's request is too vague to search a UK social housing policy "
-                    "library for.\n"
+                    "The user's request is too vague to search the document library for.\n"
                     "Write one short question back TO THE USER asking what they meant. "
-                    "Offer two or three concrete housing possibilities to choose between "
-                    "(repairs, damp and mould, complaints, tenancy, safety).\n"
+                    "Offer two or three concrete possibilities to choose between, drawn "
+                    "from what the library covers (repairs, damp and mould, complaints, "
+                    "tenancy, safety).\n"
                     "Do NOT restate their question with the missing detail filled in -- that "
                     "is guessing, not asking. Address them as 'you'.\n"
                     "Example: 'Which timescale did you mean -- for completing a repair, for "
@@ -283,8 +285,8 @@ def build_graph(retriever: KBRetriever):
             [
                 (
                     "system",
-                    "Rewrite the question as a search query for a UK social housing policy "
-                    "library. Use the vocabulary such policies use. Return the query only.",
+                    "Rewrite the question as a search query for a library of formal policy "
+                    "documents. Use the vocabulary such documents use. Return the query only.",
                 ),
                 ("human", state["question"]),
             ]

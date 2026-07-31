@@ -1,5 +1,6 @@
 name: CI
 
+# Tests run everywhere. Deployment is manual only -- see the deploy job.
 on:
   push:
     branches: [ "**" ]
@@ -44,9 +45,21 @@ jobs:
           path: eval/reports/
           if-no-files-found: ignore
 
+  # DEPLOYMENT IS OFF.
+  #
+  # This job no longer runs on a push to main. It builds an image, pushes it to
+  # ECR and rolls an ECS service, and the service predates the rewrite -- its
+  # task definition and environment have not been revisited. Merging should not
+  # silently ship to it.
+  #
+  # To re-enable automatic deploys, restore the condition below to:
+  #     if: github.ref == 'refs/heads/main'
+  # and add `push: branches: [main]` back to the triggers.
+  #
+  # Until then it runs only when started by hand from the Actions tab.
   deploy:
     needs: test
-    if: github.ref == 'refs/heads/main'
+    if: github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

@@ -1,4 +1,4 @@
-"""FastAPI service over the Aster policy knowledge base.
+"""DocMind — FastAPI service over a document knowledge base.
 
 There is no upload endpoint. The previous version ingested each uploaded PDF
 into a namespace keyed by a per-session UUID, while the knowledge base lived in
@@ -65,7 +65,7 @@ async def lifespan(app: FastAPI):
     yield
 
 
-app = FastAPI(title="Aster Policy Assistant", lifespan=lifespan)
+app = FastAPI(title="DocMind", lifespan=lifespan)
 
 
 class AskRequest(BaseModel):
@@ -95,7 +95,7 @@ async def health():
 
 @app.get("/")
 async def root():
-    return {"message": "Aster Policy Assistant. POST /ask, GET /policies."}
+    return {"message": "DocMind. POST /ask, GET /policies."}
 
 
 @app.get("/policies")

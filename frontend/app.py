@@ -6,7 +6,7 @@ import os
 API_URL = os.environ.get("API_URL", "http://localhost:8000")
 
 st.set_page_config(
-    page_title="Aster Policy Assistant",
+    page_title="DocMind",
     page_icon="✦",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -107,42 +107,6 @@ html, body, .stApp {
     margin-top: 8px;
 }
 
-/* ─── Upload Zone ──────────────────────────────────── */
-.upload-zone {
-    background: rgba(16, 185, 129, 0.05);
-    border: 1.5px dashed rgba(52, 211, 152, 0.25);
-    border-radius: 16px;
-    padding: 28px 16px;
-    text-align: center;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    margin-bottom: 20px;
-}
-
-.upload-zone:hover {
-    background: rgba(16, 185, 129, 0.09);
-    border-color: rgba(52, 211, 152, 0.45);
-}
-
-.upload-icon {
-    font-size: 32px;
-    margin-bottom: 8px;
-    display: block;
-}
-
-.upload-text {
-    font-size: 13px;
-    color: rgba(232, 245, 238, 0.65);
-    line-height: 1.5;
-}
-
-.upload-text strong {
-    color: #34d399;
-    display: block;
-    font-size: 14px;
-    margin-bottom: 4px;
-}
-
 /* ─── Status Cards ─────────────────────────────────── */
 .status-card {
     background: rgba(255,255,255,0.03);
@@ -165,8 +129,6 @@ html, body, .stApp {
 
 .status-dot.idle    { background: rgba(148, 163, 184, 0.4); }
 .status-dot.active  { background: #10b981; box-shadow: 0 0 8px #10b981; animation: pulse-dot 1.5s infinite; }
-.status-dot.loading { background: #f59e0b; box-shadow: 0 0 8px #f59e0b; animation: pulse-dot 0.8s infinite; }
-.status-dot.done    { background: #10b981; }
 
 @keyframes pulse-dot {
     0%, 100% { opacity: 1; transform: scale(1); }
@@ -175,33 +137,6 @@ html, body, .stApp {
 
 .status-text { color: rgba(232, 245, 238, 0.8); }
 .status-text span { display: block; font-size: 11px; color: rgba(232, 245, 238, 0.4); margin-top: 2px; }
-
-/* Doc info pill */
-.doc-pill {
-    background: rgba(16, 185, 129, 0.1);
-    border: 1px solid rgba(16, 185, 129, 0.2);
-    border-radius: 10px;
-    padding: 12px 14px;
-    font-size: 12px;
-    font-family: 'DM Mono', monospace;
-    color: #34d399;
-    word-break: break-all;
-    margin-top: 16px;
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-}
-
-/* Reset button */
-.reset-hint {
-    font-size: 11px;
-    color: rgba(239, 68, 68, 0.5);
-    text-align: center;
-    margin-top: 24px;
-    cursor: pointer;
-    transition: color 0.2s;
-}
-.reset-hint:hover { color: rgba(239, 68, 68, 0.85); }
 
 /* ─── Hide Streamlit chrome ────────────────────────── */
 #MainMenu, footer, header { visibility: hidden; }
@@ -267,24 +202,6 @@ html, body, .stApp {
 }
 
 /* Suggested questions */
-.suggested-questions {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    max-width: 560px;
-    margin: 28px auto 0;
-    padding: 0 16px;
-}
-
-.sq-label {
-    font-size: 10px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: rgba(52, 211, 152, 0.4);
-    margin-bottom: 4px;
-    text-align: center;
-}
-
 /* Override for suggested question buttons in main area */
 .suggested-q-wrap .stButton button {
     background: rgba(255,255,255,0.03) !important;
@@ -374,14 +291,6 @@ html, body, .stApp {
 }
 
 /* Hint pills row */
-.hint-row {
-    display: flex;
-    gap: 8px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
 /* Hint buttons — styled via Streamlit button override below */
 div[data-testid="stHorizontalBlock"] .stButton button,
 .hint-btn-wrap .stButton button {
@@ -551,34 +460,7 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
     box-shadow: 0 0 16px rgba(16,185,129,0.4) !important;
 }
 
-/* ─── File uploader override ───────────────────────── */
-[data-testid="stFileUploader"] {
-    background: transparent !important;
-}
-
-[data-testid="stFileUploader"] section {
-    background: rgba(16,185,129,0.04) !important;
-    border: 1.5px dashed rgba(52,211,152,0.22) !important;
-    border-radius: 14px !important;
-    padding: 20px !important;
-}
-
-[data-testid="stFileUploader"] section:hover {
-    background: rgba(16,185,129,0.08) !important;
-    border-color: rgba(52,211,152,0.42) !important;
-}
-
-[data-testid="stFileUploader"] label {
-    color: rgba(232,245,238,0.7) !important;
-    font-size: 13px !important;
-}
-
-[data-testid="stFileUploaderDropzoneInstructions"] {
-    color: rgba(232,245,238,0.55) !important;
-    font-size: 12px !important;
-}
-
-/* Button overrides — sidebar remove doc button */
+/* Button overrides — sidebar clear-conversation button */
 [data-testid="stSidebar"] .stButton button {
     background: rgba(239,68,68,0.1) !important;
     color: rgba(252,165,165,0.8) !important;
@@ -612,38 +494,6 @@ div[data-testid="stHorizontalBlock"] .stButton button:hover,
 ::-webkit-scrollbar-track { background: transparent; }
 ::-webkit-scrollbar-thumb { background: rgba(52,211,152,0.2); border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: rgba(52,211,152,0.4); }
-
-/* ─── Main Upload Zone ─────────────────────────────── */
-.main-upload-zone {
-    margin-top: 4px;
-}
-
-.main-upload-zone [data-testid="stFileUploader"] section {
-    background: rgba(16,185,129,0.05) !important;
-    border: 1.5px dashed rgba(52,211,152,0.3) !important;
-    border-radius: 20px !important;
-    padding: 40px 32px !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-    cursor: pointer !important;
-}
-
-.main-upload-zone [data-testid="stFileUploader"] section:hover {
-    background: rgba(16,185,129,0.09) !important;
-    border-color: rgba(52,211,152,0.55) !important;
-    box-shadow: 0 0 40px rgba(16,185,129,0.08) !important;
-}
-
-.main-upload-zone [data-testid="stFileUploaderDropzoneInstructions"] div span {
-    font-size: 15px !important;
-    color: rgba(232,245,238,0.75) !important;
-    font-family: 'DM Sans', sans-serif !important;
-}
-
-.main-upload-zone [data-testid="stFileUploaderDropzoneInstructions"] div small {
-    color: rgba(52,211,152,0.6) !important;
-    font-size: 12px !important;
-}
 
 </style>
 """, unsafe_allow_html=True)
@@ -687,7 +537,7 @@ with st.sidebar:
     st.markdown("""
         <div class="brand">
             <div class="brand-icon">✦</div>
-            <div class="brand-name">Aster Policy Assistant</div>
+            <div class="brand-name">DocMind</div>
         </div>
     """, unsafe_allow_html=True)
 
@@ -733,12 +583,12 @@ with st.sidebar:
     # ── Policies in the knowledge base ──
     st.markdown('<div class="sidebar-divider"></div>', unsafe_allow_html=True)
     st.markdown(
-        f'<div class="sidebar-label">Knowledge base · {len(policies)} policies</div>',
+        f'<div class="sidebar-label">Knowledge base · {len(policies)} documents</div>',
         unsafe_allow_html=True,
     )
 
     if policies_error:
-        st.error(f"Could not load policies: {policies_error}")
+        st.error(f"Could not load the document list: {policies_error}")
     else:
         expired = [p for p in policies if p["status"] == "expired"]
         if expired:
@@ -747,7 +597,7 @@ with st.sidebar:
                 f'⚠ {len(expired)} past their review date</div>',
                 unsafe_allow_html=True,
             )
-        with st.expander("Browse policies"):
+        with st.expander("Browse documents"):
             for p in policies:
                 badge = " ⚠" if p["status"] == "expired" else ""
                 st.markdown(
@@ -765,7 +615,7 @@ SUGGESTED_QUESTIONS = [
     ("🔥", "What does the Fire Safety Policy require for risk assessments?"),
     ("⚖️", "How does the complaints process work and what are the timescales?"),
     ("🛡️", "What support is available under the Domestic Abuse Policy?"),
-    ("📋", "Which policies are past their review date?"),
+    ("📋", "Which documents are past their review date?"),
 ]
 
 
@@ -811,13 +661,13 @@ def render_answer(message):
 if not st.session_state.messages and not st.session_state.is_thinking:
     st.markdown("""
         <div class="welcome-wrap">
-            <div class="welcome-glyph">✦ Aster Policy Assistant</div>
+            <div class="welcome-glyph">✦ DocMind</div>
             <h1 class="welcome-title">
                 Ask anything about<br>
-                <em>Aster's policies</em>
+                <em>your documents</em>
             </h1>
             <p class="welcome-sub">
-                Answers come only from the policy library, with a citation to the
+                Answers come only from the loaded library, with a citation to the
                 document and page they came from.
             </p>
         </div>
@@ -867,7 +717,7 @@ if "pending_hint" in st.session_state:
     st.session_state.is_thinking = True
     st.rerun()
 
-user_input = st.chat_input("Ask about an Aster policy…")
+user_input = st.chat_input("Ask about a document…")
 if user_input:
     st.session_state.messages.append({"role": "user", "content": user_input})
     st.session_state.is_thinking = True
